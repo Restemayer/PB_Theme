@@ -111,8 +111,7 @@ body {
 .grid-item .card-body .client-pic img {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .grid-item .card-body .card-info {
   max-width: 100%;

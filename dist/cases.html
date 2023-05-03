@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <script src="js/numberbubble.js"></script>
-    <!-- <link rel="icon" href="images/favicon.png" /> -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 </head>
 
 <body>
@@ -88,7 +89,14 @@
         </nav>
     </header>
     <div class="filter-options">
+        <label for="counties">Filter by County:</label>
 
+        <select name="counties" id="counties">
+        <option value="Lincoln">Lincoln</option>
+        <option value="Langlade">Langade</option>
+        <option value="Price">Price</option>
+        <option value="Taylor">Taylor</option>
+        </select>
     </div>
     <div class="grid-container">
         <a class="card-link" href="https://www.example.com">
