@@ -52,10 +52,10 @@ nav {
 }
 nav .left-items, nav .right-items {
   flex: 1;
+  align-items: center;
 }
 nav .right-items {
   display: flex;
-  align-items: center;
   margin-right: 10px;
   justify-content: flex-end; /* align items to the right */
 }
@@ -72,16 +72,17 @@ nav .center-items {
 
 .menu-item {
   border: 2px solid black;
-  border-radius: 5px;
-  height: 5vh;
-  width: 5vh;
+  border-radius: 10px;
+  height: 3vh;
+  width: 3vh;
   margin-left: 10px;
   position: relative;
   display: inline-block;
   transition: all 0.5s ease-in-out; /* Add transition for smooth effect on hover */
 }
 .menu-item img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: 100%;
   width: 100%;
   padding: 5px;
@@ -106,6 +107,11 @@ nav .center-items {
 }
 .menu-item:hover .logo-text {
   opacity: 1; /* Show on hover */
+}
+
+.big-item {
+  height: 5vh;
+  width: 5vh;
 }
 
 .number-bubble {
@@ -157,6 +163,7 @@ input.nosubmit {
 .profile-pic .pic-container img {
   width: 120%;
   height: 120%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transform: translate(-10%, -10%);
 }/*# sourceMappingURL=header.css.map */

@@ -52,8 +52,21 @@ body {
 }
 
 .filter-options {
-  margin: 10px 0;
-  height: 10vh;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.filter-option label {
+  margin-right: 5px;
 }
 
 .grid-container {
@@ -70,7 +83,7 @@ body {
 
 .grid-item {
   background-color: rgb(147, 198, 214);
-  max-height: 300px;
+  height: 150px;
   max-width: 400px;
   border: 2px solid black;
   border-radius: 5px;
@@ -111,7 +124,6 @@ body {
 .grid-item .card-body .client-pic img {
   width: 100%;
   height: auto;
-  object-fit: cover;
 }
 .grid-item .card-body .card-info {
   max-width: 100%;
@@ -120,4 +132,41 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: min(12px, max(6px, 25vw));
+}
+
+.end-page {
+  margin-top: 20px;
+}
+
+.sorting-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.sorting-options .sort-by {
+  margin-top: auto;
+  margin-left: 10px;
+  align-self: center;
+}
+.sorting-options .sort-direction {
+  align-self: center;
+  margin-left: 10px;
+}
+.sorting-options .sort-direction button {
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+  border: 2px black solid;
+  border-radius: 3px;
+  background-color: rgb(147, 198, 214);
+  cursor: pointer;
+}
+.sorting-options .sort-direction button img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

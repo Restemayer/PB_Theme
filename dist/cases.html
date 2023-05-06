@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <script src="js/numberbubble.js"></script>
+    <script src="js/county_color.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 </head>
@@ -20,7 +21,7 @@
         <nav>
             <div class="main-menu left-items">
                 <a href="/">
-                    <div class="menu-item">
+                    <div class="menu-item big-item">
                         <img src="./images/menu-icons/LogoMenu.png" alt="Wisconsin State Public Defender Logo">
                         <div class="logo-text"><small>Dashboard</small></div>
                     </div>
@@ -81,6 +82,12 @@
                 </a>
                 <a href="/">
                     <div class="menu-item">
+                        <div class="pic-container"><img src="./images/menu-icons/SettingsMenu.png" alt="Settings Menu Icon"></div>
+                        <div class="logo-text"><small>Settings</small></div>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="menu-item">
                         <img src="./images/menu-icons/LogoutButton.png" alt="Logout">
                         <div class="logo-text"><small>Logout</small></div>
                     </div>
@@ -89,21 +96,76 @@
         </nav>
     </header>
     <div class="filter-options">
-        <label for="counties">Filter by County:</label>
-
-        <select name="counties" id="counties">
-        <option value="Lincoln">Lincoln</option>
-        <option value="Langlade">Langade</option>
-        <option value="Price">Price</option>
-        <option value="Taylor">Taylor</option>
-        </select>
+        <div class="filter-option">
+          <label for="counties">Filter by County: </label>
+          <select name="counties" id="counties">
+            <option value="All">All</option>
+            <option value="Lincoln">Lincoln</option>
+            <option value="Langlade">Langade</option>
+            <option value="Price">Price</option>
+            <option value="Taylor">Taylor</option>
+          </select>
+        </div>
+        <div class="filter-option">
+          <label for="case_type">Filter by Case Type: </label>
+          <select name="case_type" id="case_type_select">
+            <option value="All">All</option>
+            <option value="Criminal">Criminal</option>
+            <option value="Criminal Traffic">Criminal Traffic</option>
+            <option value="Guardianships">Guardianships</option>
+            <option value="Revocations">Revocations</option>
+          </select>
+        </div>
     </div>
+    <div class="sorting-options">      
+        <div class="sort-by">
+          <label for="sort_by">Sort cases by: </label>
+          <select name="sort_by" id="sort_by">
+            <option value="County">County</option>
+            <option value="Case Type">Case Type</option>
+            <option value="Client Last Name">Client Last Name</option>
+            <option value="Next Hearing">Next Hearing</option>
+          </select>
+        </div>
+        <div class="sort-direction">
+            <button class="ascending-button">
+                <img src="./images/filtering/ascending.png">
+            </button>
+            <button class="descending-button hidden">
+                <img src="./images/filtering/descending.png">
+            </button>
+        </div>
+    </div>
+      
     <div class="grid-container">
         <a class="card-link" href="https://www.example.com">
             <div class="grid-item">
                 <div class="card-header">
                     <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
+                    <p><span class="county">Lincoln</span> Co. 2022CF0000691</p>
+                </div>
+                <div class="card-body">
+                    <div class="client-pic">
+
+                        <img src="./images/default-avatar.png" alt="Profile Picture">
+
+                    </div>
+                    <div class="card-info">
+                        <p>1st Degree Intentional Homicide</p>
+                        <p>4 other counts</p>
+                        <p>Judge Mike Smith</p>
+                        <br>
+                        <p>Next: Preliminary hearing</p>
+                        <p>January 1, 2024 at 12:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="card-link" href="https://www.example.com">
+            <div class="grid-item">
+                <div class="card-header">
+                    <p class="card-title">State vs. Jane Smith</p>
+                    <p><span class="county">Langlade</span> Co. 2022CF0000691</p>
                 </div>
                 <div class="card-body">
                     <div class="client-pic">
@@ -126,7 +188,7 @@
             <div class="grid-item">
                 <div class="card-header">
                     <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
+                    <p><span class="county">Taylor</span> Co. 2022CF0000691</p>
                 </div>
                 <div class="card-body">
                     <div class="client-pic">
@@ -144,375 +206,7 @@
                     </div>
                 </div>
             </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a class="card-link" href="https://www.example.com">
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p>Lincoln Co. 2022CF0000691</p>
-                </div>
-                <div class="card-body">
-                    <div class="client-pic">
-
-                        <img src="./images/default-avatar.png" alt="Profile Picture">
-
-                    </div>
-                    <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </a>
+        </a>               
     </div>
 </body>
 

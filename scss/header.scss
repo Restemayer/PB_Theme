@@ -12,13 +12,14 @@ nav {
     
     .left-items, .right-items {
       flex: 1;
+      align-items: center;
     }
 
     .right-items {
-        display: flex;
-        align-items: center;
-        margin-right: 10px;
-        justify-content: flex-end; /* align items to the right */
+      display: flex;
+      
+      margin-right: 10px;
+      justify-content: flex-end; /* align items to the right */
     }
     
     .center-items {
@@ -34,46 +35,50 @@ nav {
     display: flex;
 }
 
-.menu-item {     
-    border: 2px solid black;
-    border-radius: 5px;
-    height: 5vh;
-    width: 5vh;
-    margin-left: 10px;
-    position: relative;
-    display: inline-block;
-    transition: all 0.5s ease-in-out; /* Add transition for smooth effect on hover */   
-    img {
-        object-fit: contain;
-        height: 100%;
-        width: 100%;        
-        padding: 5px;        
-                
-    }
+.menu-item {
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 3vh;
+  width: 3vh;
+  margin-left: 10px;
+  position: relative;
+  display: inline-block;
+  transition: all 0.5s ease-in-out; /* Add transition for smooth effect on hover */   
+  img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;        
+      padding: 5px;        
+              
+  }
 
-    .logo-text {
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 0.8em;
-        background-color: $color-primary;
-        color: $color-secondary;
-        border: 2px solid black;
-        padding: 3px 3px;
-        border-radius: 3px;
-        opacity: 0; /* Hidden by default */
-        transition: opacity 0.2s ease-in-out;
-      }            
+  .logo-text {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8em;
+      background-color: $color-primary;
+      color: $color-secondary;
+      border: 2px solid black;
+      padding: 3px 3px;
+      border-radius: 3px;
+      opacity: 0; /* Hidden by default */
+      transition: opacity 0.2s ease-in-out;
+    }            
 
-    &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 5px $color-success;
-    
-    .logo-text {
-        opacity: 1; /* Show on hover */
-        }
-    }
+  &:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px $color-success;
+  
+  .logo-text {
+      opacity: 1; /* Show on hover */
+      }
+  }
+}
+.big-item{
+  height: 5vh;
+  width: 5vh;
 }
 .number-bubble {
     position: absolute;
