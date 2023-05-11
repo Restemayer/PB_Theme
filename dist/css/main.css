@@ -145,13 +145,17 @@ body {
   margin-bottom: 10px;
 }
 .sorting-options .sort-by {
-  margin-top: auto;
   margin-left: 10px;
-  align-self: center;
 }
 .sorting-options .sort-direction {
-  align-self: center;
   margin-left: 10px;
+}
+.sorting-options .sort-direction .sort-button {
+  box-shadow: 2px 2px black;
+}
+.sorting-options .sort-direction .sort-button:active {
+  transform: translateY(1px);
+  box-shadow: none;
 }
 .sorting-options .sort-direction button {
   width: 25px;

@@ -112,15 +112,20 @@ body {
     margin-bottom: 10px;
 
     .sort-by {
-        margin-top: auto;
         margin-left: 10px;
-        align-self: center;
       }
     
     .sort-direction {
-        align-self: center;
-        margin-left: 10px; 
-
+        margin-left: 10px;
+        
+        .sort-button {
+            box-shadow: 2px 2px black;
+            
+            &:active {
+              transform: translateY(1px);
+              box-shadow: none;
+            }
+        }
         button {            
         width: 25px;
         height: 25px;

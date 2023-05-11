@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/header.css" />
     <script src="js/numberbubble.js"></script>
     <script src="js/county_color.js"></script>
+    <script src="js/sort_button.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 </head>
@@ -118,27 +119,27 @@
         </div>
     </div>
     <div class="sorting-options">      
-        <div class="sort-by">
+        <div id="sort-by" class="sort-by">
           <label for="sort_by">Sort cases by: </label>
           <select name="sort_by" id="sort_by">
-            <option value="County">County</option>
-            <option value="Case Type">Case Type</option>
-            <option value="Client Last Name">Client Last Name</option>
-            <option value="Next Hearing">Next Hearing</option>
+            <option data-sorter="county" value="County">County</option>
+            <option data-sorter="case_type" value="Case Type">Case Type</option>
+            <option data-sorter="client_name" value="Client Last Name">Client Last Name</option>
+            <option data-sorter="next-hearing" value="Next Hearing">Next Hearing</option>
           </select>
         </div>
         <div class="sort-direction">
-            <button class="ascending-button">
+            <button id="ascending-button" class="sort-button">
                 <img src="./images/filtering/ascending.png">
             </button>
-            <button class="descending-button hidden">
+            <button id="descending-button" class="sort-button hidden">
                 <img src="./images/filtering/descending.png">
             </button>
         </div>
     </div>
       
-    <div class="grid-container">
-        <a class="card-link" href="https://www.example.com">
+    <div id="list" class="grid-container">
+        <a class="card-link" href="https://www.example.com" data-sorts='{"client" : "Doe John", "county" : "Lincoln", "case_type" : "Criminal"}'>
             <div class="grid-item">
                 <div class="card-header">
                     <p class="card-title">State vs. John Doe</p>
@@ -161,11 +162,11 @@
                 </div>
             </div>
         </a>
-        <a class="card-link" href="https://www.example.com">
+        <a class="card-link" href="https://www.example.com" data-sorts='{"client" : "Smith Jane", "county" : "Langlade", "case_type" : "Criminal Traffic"}'>
             <div class="grid-item">
                 <div class="card-header">
                     <p class="card-title">State vs. Jane Smith</p>
-                    <p><span class="county">Langlade</span> Co. 2022CF0000691</p>
+                    <p><span class="county">Langlade</span> Co. 2022CT0000543</p>
                 </div>
                 <div class="card-body">
                     <div class="client-pic">
@@ -174,7 +175,7 @@
 
                     </div>
                     <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
+                        <p>Reckless Driving</p>
                         <p>4 other counts</p>
                         <p>Judge Mike Smith</p>
                         <br>
@@ -184,11 +185,11 @@
                 </div>
             </div>
         </a>
-        <a class="card-link" href="https://www.example.com">
+        <a class="card-link" href="https://www.example.com" data-sorts='{"client" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal"}'>
             <div class="grid-item">
                 <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p><span class="county">Taylor</span> Co. 2022CF0000691</p>
+                    <p class="card-title">State vs. Richard Johnson</p>
+                    <p><span class="county">Taylor</span> Co. 2022CM0000053</p>
                 </div>
                 <div class="card-body">
                     <div class="client-pic">
@@ -197,7 +198,7 @@
 
                     </div>
                     <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
+                        <p>Disorderly Conduct</p>
                         <p>4 other counts</p>
                         <p>Judge Mike Smith</p>
                         <br>
