@@ -13,6 +13,7 @@
     <script src="js/numberbubble.js"></script>
     <script src="js/county_color.js"></script>
     <script src="js/sort_button.js"></script>
+    <script src="js/filters.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 </head>
@@ -98,24 +99,34 @@
     </header>
     <div class="filter-options">
         <div class="filter-option">
-          <label for="counties">Filter by County: </label>
-          <select name="counties" id="counties">
-            <option value="All">All</option>
-            <option value="Lincoln">Lincoln</option>
-            <option value="Langlade">Langade</option>
-            <option value="Price">Price</option>
-            <option value="Taylor">Taylor</option>
+          <label for="county">Filter by County: </label>
+          <select class="filter-drop" name="county" id="county">
           </select>
+          <div class="number-bubble">0</div>
         </div>
         <div class="filter-option">
           <label for="case_type">Filter by Case Type: </label>
-          <select name="case_type" id="case_type_select">
-            <option value="All">All</option>
-            <option value="Criminal">Criminal</option>
-            <option value="Criminal Traffic">Criminal Traffic</option>
-            <option value="Guardianships">Guardianships</option>
-            <option value="Revocations">Revocations</option>
+          <select class="filter-drop" name="case_type" id="case_type">
           </select>
+          <div class="number-bubble">0</div>
+        </div>
+        <div class="filter-option">
+            <label for="next_event">Filter by Next Hearing Type: </label>
+            <select class="filter-drop" name="next_event" id="next_event">
+            </select>
+            <div class="number-bubble">0</div>
+        </div>
+        <div class="filter-option">
+            <label for="next_hearing">Filter by Next Hearing Date: </label>
+            <select class="filter-drop" name="next_hearing" id="next_hearing">
+            </select>
+            <div class="number-bubble">0</div>
+        </div>
+        <div class="filter-option">
+            <label for="judge">Filter by Judge: </label>
+            <select class="filter-drop" name="judge" id="judge">
+            </select>
+            <div class="number-bubble">0</div>
         </div>
     </div>
     <div class="sorting-options">      
@@ -123,7 +134,6 @@
           <label for="sort_by">Sort cases by: </label>
           <select name="sort_by" id="sort_by">
             <option data-sorter="county" value="County">County</option>
-            <option data-sorter="case_type" value="Case Type">Case Type</option>
             <option data-sorter="client_name" value="Client Last Name">Client Last Name</option>
             <option data-sorter="next-hearing" value="Next Hearing">Next Hearing</option>
           </select>
@@ -135,11 +145,17 @@
             <button id="descending-button" class="sort-button hidden">
                 <img src="./images/filtering/descending.png">
             </button>
+            <button id="ascending_date-button" class="sort-button hidden">
+                <img src="./images/filtering/ascendingDate.png">
+            </button>
+            <button id="descending_date-button" class="sort-button hidden">
+                <img src="./images/filtering/descendingDate.png">
+            </button>
         </div>
     </div>
       
     <div id="list" class="grid-container">
-        <a class="card-link" href="https://www.example.com" data-sorts='{"client" : "Doe John", "county" : "Lincoln", "case_type" : "Criminal"}'>
+        <a class="card-link" href="https://www.example.com" data-sorts='{"client_name" : "Doe John", "county" : "Lincoln", "case_type" : "Criminal", "next_event" : "Preliminary Hearing", "next_hearing" : "202306121300", "judge" : "Mike Smith"}'>
             <div class="grid-item">
                 <div class="card-header">
                     <p class="card-title">State vs. John Doe</p>
@@ -156,13 +172,13 @@
                         <p>4 other counts</p>
                         <p>Judge Mike Smith</p>
                         <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
+                        <p>Next:  <span id="next_event">Preliminary hearing</span></p>
+                        <p>June 12, 2023 at 1:00 PM</p>
                     </div>
                 </div>
             </div>
         </a>
-        <a class="card-link" href="https://www.example.com" data-sorts='{"client" : "Smith Jane", "county" : "Langlade", "case_type" : "Criminal Traffic"}'>
+        <a class="card-link" href="https://www.example.com" data-sorts='{"client_name" : "Smith Jane", "county" : "Langlade", "case_type" : "Criminal Traffic", "next_event" : "Plea & Sentencing", "next_hearing" : "202303110800", "judge" : "Mike Smith"}'>
             <div class="grid-item">
                 <div class="card-header">
                     <p class="card-title">State vs. Jane Smith</p>
@@ -179,13 +195,13 @@
                         <p>4 other counts</p>
                         <p>Judge Mike Smith</p>
                         <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
+                        <p>Next:  <span id="next_event">Plea & Sentencing</span></p>
+                        <p>March 11, 2023 at 8:00 AM</p>
                     </div>
                 </div>
             </div>
         </a>
-        <a class="card-link" href="https://www.example.com" data-sorts='{"client" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal"}'>
+        <a class="card-link" href="https://www.example.com" data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
             <div class="grid-item">
                 <div class="card-header">
                     <p class="card-title">State vs. Richard Johnson</p>
@@ -202,8 +218,8 @@
                         <p>4 other counts</p>
                         <p>Judge Mike Smith</p>
                         <br>
-                        <p>Next: Preliminary hearing</p>
-                        <p>January 1, 2024 at 12:00 PM</p>
+                        <p>Next: Initial Appearance</p>
+                        <p>December 12, 2023 at 4:00 PM</p>
                     </div>
                 </div>
             </div>
