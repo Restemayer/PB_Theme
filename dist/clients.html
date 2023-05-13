@@ -155,11 +155,11 @@
     </div>
       
     <div id="list" class="grid-container">
-        <a class="card-link" href="https://www.example.com" data-sorts='{"client_name" : "Doe John", "county" : "Lincoln", "case_type" : "Criminal", "next_event" : "Preliminary Hearing", "next_hearing" : "202306121300", "judge" : "Mike Smith"}'>
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. John Doe</p>
-                    <p><span class="county">Lincoln</span> Co. 2022CF0000691</p>
+        <a class="card-link" href="https://www.example.com" data-sorts='{"client_name" : "Doe John", "next_event_case" : "Lincoln 2023CF000045", "next_event" : "Preliminary Hearing", "next_hearing" : "202402250900"}'>
+            <div class="client-grid-item grid-item">
+                <div class="client-card-header card-header">
+                    <p class="client-card card-title">Doe, John C.</p>
+                    <p>DOB: 08-12-2001</p>
                 </div>
                 <div class="card-body">
                     <div class="client-pic">
@@ -168,21 +168,39 @@
 
                     </div>
                     <div class="card-info">
-                        <p>1st Degree Intentional Homicide</p>
-                        <p>4 other counts</p>
-                        <p>Judge Mike Smith</p>
-                        <br>
-                        <p>Next:  <span id="next_event">Preliminary hearing</span></p>
-                        <p>June 12, 2023 at 1:00 PM</p>
+                        <div class="address">
+                            <div class="address-column">
+                              <div class="address-type">Home:</div>
+                              <div class="address-info">
+                                123 Main St.<br>
+                                Anywhere, MO 55555
+                              </div>
+                            </div>
+                          </div>                          
+                          <div class="phone">
+                            <div class="phone-column">
+                              <div class="phone-type">Home:</div>
+                              <div class="phone-info">(123) 555-5678</div>
+                            </div>
+                            <div class="phone-column">
+                              <div class="phone-type">Work:</div>
+                              <div class="phone-info">(123) 555-1234</div>
+                            </div>
+                          </div>                        
                     </div>
+                </div>
+                <div class="client-card-footer">
+                    <div>3 Total Cases</div>
+                    <div class="next-hearing">Next: Lincoln 2023CF000045</div>
+                    <div>Preliminary Hearing March 25, 2024 at 9:00 AM</div>
                 </div>
             </div>
         </a>
         <a class="card-link" href="https://www.example.com" data-sorts='{"client_name" : "Smith Jane", "county" : "Langlade", "case_type" : "Criminal Traffic", "next_event" : "Plea & Sentencing", "next_hearing" : "202303110800", "judge" : "Mike Smith"}'>
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. Jane Smith</p>
-                    <p><span class="county">Langlade</span> Co. 2022CT0000543</p>
+            <div class="client-grid-item grid-item">
+                <div class="client-card-header card-header">
+                    <p class="client-card card-title">Smith, Jane D.</p>
+                    <p>DOB: 12-20-1987</p>
                 </div>
                 <div class="card-body">
                     <div class="client-pic">
@@ -202,10 +220,10 @@
             </div>
         </a>
         <a class="card-link" href="https://www.example.com" data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
-            <div class="grid-item">
-                <div class="card-header">
-                    <p class="card-title">State vs. Richard Johnson</p>
-                    <p><span class="county">Taylor</span> Co. 2022CM0000053</p>
+            <div class="client-grid-item grid-item">
+                <div class="client-card-header card-header">
+                    <p class="client-card card-title">Johnson, Richard P.</p>
+                    <p>DOB: 04-13-1979</p>
                 </div>
                 <div class="card-body">
                     <div class="client-pic">

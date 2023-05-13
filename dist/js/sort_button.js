@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const descendingDateButton = document.querySelector('#descending_date-button');
     const sortByDropdown = document.querySelector('#sort_by');
 
+    SortData('county', ascending);
+
 
 
     ascendingButton.addEventListener('click', () => {
@@ -80,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         });
 
-        if (attribute == "next-hearing") {
+        if (attribute == "next_hearing") {
           if (ascending) { ascendingDateButton.classList.remove('hidden'); }
           else { descendingDateButton.classList.remove('hidden'); }
         }

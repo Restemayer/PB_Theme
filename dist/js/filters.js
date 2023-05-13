@@ -1,19 +1,17 @@
 function getFilterOptions() {
     let filterOptions = {};
     const cardLinks = document.querySelectorAll('.card-link:not(.hidden)');
+    let add_no_schedule_options = false;
     cardLinks.forEach((cardLink) => {
       const dataSorts = JSON.parse(cardLink.dataset.sorts);
       Object.entries(dataSorts).forEach(([key, value]) => {
-        if (key === 'next_hearing') {          
+        if (key === 'next_hearing') { 
+          if (!filterOptions[key]) {
+            filterOptions[key] = [];
+          }         
           if (value === '0') {
-            if (!filterOptions[key]) {
-              filterOptions[key] = [];
-            }
-            filterOptions[key].push('Only Not Scheduled', 'Ignore Not Scheduled');
-          } else {
-            if (!filterOptions[key]) {
-              filterOptions[key] = [];
-            }
+            add_no_schedule_options = true;
+          } else {            
             const month = value.substring(4, 6);
             switch (month) {
               case '01':
@@ -55,15 +53,29 @@ function getFilterOptions() {
             }
           }
         } else {
-          if (!filterOptions[key]) {
-            filterOptions[key] = [];
-          }
+          if (value == "Nothing Scheduled") { return; }          
           if (!filterOptions[key].includes(value)) {
             filterOptions[key].push(value);
           }
-        }
+        }               
       });
     });
+    const monthsInOrder = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];    
+
+    Object.keys(filterOptions).forEach((key, index) => {
+      if (key === 'next_hearing') { 
+        filterOptions['next_hearing'].sort((a, b) => {
+        return monthsInOrder.indexOf(a) - monthsInOrder.indexOf(b);
+      });}
+      else {
+        filterOptions[key].sort();
+      }
+    });
+    
+    if (add_no_schedule_options) {
+      filterOptions['next_hearing'].unshift('Filter Unscheduled Cases');
+      filterOptions['next_hearing'].unshift('Only Unscheduled Cases');
+    } 
     for (let key in filterOptions) {
         if (filterOptions[key].length > 1) {
           filterOptions[key].unshift('All');
@@ -125,7 +137,7 @@ function onChange(event, dropdowns){
 
         });        
     }
-    if (event.target.value == "All") {bubble_div.textContent = "0"; } 
+    if (event.target.value == "All") { bubble_div.textContent = "0"; } 
 }
 
 function setBubbles() {
@@ -147,12 +159,74 @@ function filterCards(dropdowns) {
     }
   });
   dropdowns.forEach((dropdown) => {
-    if ( dropdown.value == "All" || dropdown.options.length == 1 ){ return; }    
-    cardLinks.forEach((card) => {
-      sorts_JSON = JSON.parse(card.dataset.sorts);
-      value = sorts_JSON[dropdown.id];
-      if (value != dropdown.value) { card.classList.add('hidden'); }
-    });
+    if ( dropdown.value == "All" || dropdown.options.length < 2 ){ return; }
+
+    if ( dropdown.id == "next_hearing" ){
+      cardLinks.forEach((card) => {
+        sorts_JSON = JSON.parse(card.dataset.sorts);
+        value = sorts_JSON[dropdown.id];
+        if (dropdown.value == 'Filter Unscheduled Cases') {
+          if ( value == "0" ) { card.classList.add('hidden'); }
+          return;
+        }
+        if (dropdown.value == 'Only Unscheduled Cases') {
+          if ( value != "0" ) { card.classList.add('hidden'); }
+          return;
+        }
+        if (value == "0") {
+          card.classList.add('hidden')
+          return;
+        }
+        const month = value.substring(4, 6);
+        switch(dropdown.value) {
+          case "January":
+            if ( month != "01" ) { card.classList.add('hidden'); }
+            break;
+          case "February":
+            if ( month != "02" ) { card.classList.add('hidden'); }
+            break;
+          case "March":
+            if ( month != "03" ) { card.classList.add('hidden'); }
+            break;
+          case "April":
+            if ( month != "04" ) { card.classList.add('hidden'); }
+            break;
+          case "May":
+            if ( month != "05" ) { card.classList.add('hidden'); }
+            break;
+          case "June":
+            if ( month != "06" ) { card.classList.add('hidden'); }
+            break;
+          case "July":
+            if ( month != "07" ) { card.classList.add('hidden'); }
+            break;
+          case "August":
+            if ( month != "08" ) { card.classList.add('hidden'); }
+            break;
+          case "September":
+            if ( month != "09" ) { card.classList.add('hidden'); }
+            break;
+          case "October":
+            if ( month != "10" ) { card.classList.add('hidden'); }
+            break;
+          case "November":
+            if ( month != "11" ) { card.classList.add('hidden'); }
+            break;
+          case "December":
+            if ( month != "12" ) { card.classList.add('hidden'); }
+            break;
+          default:
+            return;
+        }        
+      });
+    }
+    else {
+      cardLinks.forEach((card) => {
+        sorts_JSON = JSON.parse(card.dataset.sorts);
+        value = sorts_JSON[dropdown.id];
+        if (value != dropdown.value) { card.classList.add('hidden'); }
+      });
+    }
   });
 }
 
