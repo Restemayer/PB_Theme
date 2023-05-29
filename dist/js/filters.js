@@ -53,7 +53,11 @@ function getFilterOptions() {
             }
           }
         } else {
-          if (value == "Nothing Scheduled") { return; }          
+          console.log(key)
+          if (value == "Nothing Scheduled") { return; }
+          if (!filterOptions[key]) { 
+            filterOptions[key] = []; 
+          }           
           if (!filterOptions[key].includes(value)) {
             filterOptions[key].push(value);
           }
@@ -232,56 +236,23 @@ function filterCards(dropdowns) {
 
   document.addEventListener('DOMContentLoaded', function() { 
     filter_options = getFilterOptions();
+    console.log("Filter options complete")
     populateDropdowns(filter_options);
 
     // listen for changes on all dropdowns
-    const countyDropdown = document.getElementById('county');
-    const caseTypeDropdown = document.getElementById('case_type');
-    const nextEventDropdown = document.getElementById('next_event');
-    const nextHearingDropdown = document.getElementById('next_hearing');
-    const judgeDropdown = document.getElementById('judge');
+    // get all dropdowns in an array
+const dropdowns = Array.from(document.querySelectorAll('.filter-drop'));
 
-    const dropdowns = [ countyDropdown, caseTypeDropdown, nextEventDropdown, nextHearingDropdown, judgeDropdown ]
-
-    countyDropdown.addEventListener('change', function(event) {
-        onChange(event, dropdowns);
-        filterCards(dropdowns);
-        filter_options = getFilterOptions();
-        populateDropdowns(filter_options);
-        setBubbles();
-      });
-      
-      caseTypeDropdown.addEventListener('change', function(event) {
-        onChange(event, dropdowns);
-        filterCards(dropdowns);
-        filter_options = getFilterOptions();
-        populateDropdowns(filter_options);
-        setBubbles();
-      });
-      
-      nextEventDropdown.addEventListener('change', function(event) {
-        onChange(event, dropdowns);
-        filterCards(dropdowns);
-        filter_options = getFilterOptions();
-        populateDropdowns(filter_options);
-        setBubbles();
-      });
-      
-      nextHearingDropdown.addEventListener('change', function(event) {
-        onChange(event, dropdowns);
-        filterCards(dropdowns);
-        filter_options = getFilterOptions();
-        populateDropdowns(filter_options);
-        setBubbles();
-      });
-      
-      judgeDropdown.addEventListener('change', function(event) {
-        onChange(event, dropdowns);
-        filterCards(dropdowns);
-        filter_options = getFilterOptions();
-        populateDropdowns(filter_options);
-        setBubbles();
-      });
-
+// iterate over each dropdown
+dropdowns.forEach(dropdown => {
+  // attach an event listener to each dropdown
+  dropdown.addEventListener('change', function(event) {
+    onChange(event, dropdowns);
+    filterCards(dropdowns);
+    const filter_options = getFilterOptions();
+    populateDropdowns(filter_options);
+    setBubbles();
+  });
+});
   });
   

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Wisconsin Public Defender ParalegalBot</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Figtree">
+    <link rel="stylesheet" href="./css/client_page.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <script src="js/numberbubble.js"></script>
+    <script src="js/county_color.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="main-menu left-items">
+                <a href="/">
+                    <div class="menu-item big-item">
+                        <img src="./images/menu-icons/LogoMenu.png" alt="Wisconsin State Public Defender Logo">
+                        <div class="logo-text"><small>Dashboard</small></div>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="menu-item">
+                        <img src="./images/menu-icons/CasesMenu.png" alt="Case Menu Icon">
+                        <div class="logo-text"><small>Cases</small></div>
+                        <div class="number-bubble">0</div>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="menu-item">
+                        <img src="./images/menu-icons/ClientsMenu.png" alt="Client Menu Icon">
+                        <div class="logo-text"><small>Clients</small></div>
+                        <div class="number-bubble">5</div>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="menu-item">
+                        <img src="./images/menu-icons/CalendarMenu.png" alt="Calendar Menu Icon">
+                        <div class="logo-text"><small>Calendars</small></div>
+                        <div class="number-bubble">1</div>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="menu-item">
+                        <img src="./images/menu-icons/ContactsMenu.png" alt="Contact Menu Icon">
+                        <div class="logo-text"><small>Contacts</small></div>
+                    </div>
+                </a>
+            </div>
+            <div class="center-items">
+                <form class="nosubmit">
+                    <input class="nosubmit" type="search" placeholder="Search...">
+                </form>
+            </div>
+            <div class="right-items">
+                <a href="/">
+                    <div class="menu-item profile-pic">
+                        <div class="pic-container"><img src="./images/contact-photos/default-avatar.png"
+                                alt="User profile pic"></div>
+                        <div class="logo-text"><small>Profile</small></div>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="menu-item">
+                        <img src="./images/menu-icons/MessengerMenu.png" alt="Messenger Menu Icon">
+                        <div class="logo-text"><small>Messages</small></div>
+                        <div class="number-bubble">15</div>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="menu-item">
+                        <img src="./images/menu-icons/AlertMenu.png" alt="Alert Menu Icon">
+                        <div class="logo-text"><small>Alerts</small></div>
+                        <div class="number-bubble">7</div>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="menu-item">
+                        <div class="pic-container"><img src="./images/menu-icons/SettingsMenu.png"
+                                alt="Settings Menu Icon"></div>
+                        <div class="logo-text"><small>Settings</small></div>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="menu-item">
+                        <img src="./images/menu-icons/LogoutButton.png" alt="Logout">
+                        <div class="logo-text"><small>Logout</small></div>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="client_header_div">
+        <div class="panel">
+            <img class="edit-button" src="images/edit-icons/pencil-icon.png" alt="Edit">
+            <div class="photo-container">
+                <img class="contact-photo" src="images/contact-photos/default-avatar.png" alt="contact photo" />
+                <div class="photo-date">Photo: 5/27/2023</div>
+            </div>
+            <div class="contact-info">
+                <div class="contact-name">Longestname Imaginablewithmanysuffixes</div>
+                <div class="contact-dob">March 1980 (43 years old)</div>
+                <div class="contact-tags">
+                    <span class="tag">Client</span>
+                    <span class="tag">Paralegal</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-row">
+        <div class="panel-column">
+            <div class="info-panel">
+                <h2><strong>Contact Information</strong></h2>
+                <div class="frame">
+                    <div class="info-category">
+                        <h3>Addresses</h3>
+                        <div class="info-card home-address">
+                            <div class="card-content">
+                                <h4>Home</h4>
+                                <p>123 Main St</p>
+                                <p>Springfield, USA</p>
+                            </div>
+                            <div class="view-button button-view">
+                                <img src="images/edit-icons/eye-icon.png" alt="View">
+                            </div>
+                        </div>
+                        <div class="info-card work-address">
+                            <div class="card-content">
+                                <h4>Work</h4>
+                                <p>ACME, Inc.</p>
+                                <p>456 Elm St</p>
+                                <p>Springfield, USA</p>
+                            </div>
+                            <div class="view-button button-view">
+                                <img src="images/edit-icons/eye-icon.png" alt="View">
+                            </div>
+                        </div>
+                        <div class="info-card button-card">
+                            <div class="add-button-image">
+                                <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-category">
+                        <h3>Phone Numbers</h3>
+                        <div class="info-card home-phone">
+                            <div class="card-content">
+                                <h4>Home</h4>
+                                <p>(123) 456-7890</p>
+                            </div>
+                            <div class="view-button button-view">
+                                <img src="images/edit-icons/eye-icon.png" alt="View">
+                            </div>
+                        </div>
+                        <div class="info-card work-phone">
+                            <div class="card-content">
+                                <h4>Work</h4>
+                                <p>(098) 765-4321</p>
+                            </div>
+                            <div class="view-button button-view">
+                                <img src="images/edit-icons/eye-icon.png" alt="View">
+                            </div>
+                        </div>
+                        <div class="info-card button-card">
+                            <div class="add-button-image">
+                                <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-category">
+                        <h3>Emails</h3>
+                        <div class="info-card personal-email">
+                            <div class="card-content">
+                                <h4>Personal</h4>
+                                <p>john.doe@example.com</p>
+                            </div>
+                            <div class="view-button button-view">
+                                <img src="images/edit-icons/eye-icon.png" alt="View">
+                            </div>
+                        </div>
+                        <div class="info-card work-email">
+                            <div class="card-content">
+                                <h4>Work</h4>
+                                <p>john.doe@work.com</p>
+                            </div>
+                            <div class="view-button button-view">
+                                <img src="images/edit-icons/eye-icon.png" alt="View">
+                            </div>
+                        </div>
+                        <div class="info-card button-card">
+                            <div class="add-button-image">
+                                <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-column">
+            <div class="info-panel">
+                <h2><strong>Active Cases</strong></h2>
+                <div class="frame">
+                    <a class="card-link" href="https://www.example.com"
+                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                        <div class="grid-item">
+                            <div class="card-header">
+                                <p><span class="county">Taylor</span> Co. 2022CM0000053</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-info">
+                                    <p>Judge Mike Smith</p>
+                                    <br>
+                                    <p>Disorderly Conduct</p>
+                                    <p>4 other counts</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="card-link" href="https://www.example.com"
+                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                        <div class="grid-item">
+                            <div class="card-header">
+                                <p><span class="county">Lincoln</span> Co. 2022CM0000053</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-info">
+                                    <p>Judge Mike Smith</p>
+                                    <br>
+                                    <p>Disorderly Conduct</p>
+                                    <p>4 other counts</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="card-link" href="https://www.example.com"
+                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                        <div class="grid-item">
+                            <div class="card-header">
+                                <p><span class="county">Langlade</span> Co. 2022CM0000053</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-info">
+                                    <p>Judge Mike Smith</p>
+                                    <br>
+                                    <p>Disorderly Conduct</p>
+                                    <p>4 other counts</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="info-panel">
+                <h2><strong>Closed Cases</strong></h2>
+                <div class="frame">
+                    <a class="card-link" href="https://www.example.com"
+                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                        <div class="grid-item">
+                            <div class="card-header">
+                                <p><span class="county">Taylor</span> Co. 2022CM0000053</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-info">
+                                    <p>Judge Mike Smith</p>
+                                    <br>
+                                    <p>Disorderly Conduct</p>
+                                    <p>4 other counts</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="card-link" href="https://www.example.com"
+                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                        <div class="grid-item">
+                            <div class="card-header">
+                                <p><span class="county">Lincoln</span> Co. 2022CM0000053</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-info">
+                                    <p>Judge Mike Smith</p>
+                                    <br>
+                                    <p>Disorderly Conduct</p>
+                                    <p>4 other counts</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="card-link" href="https://www.example.com"
+                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                        <div class="grid-item">
+                            <div class="card-header">
+                                <p><span class="county">Langlade</span> Co. 2022CM0000053</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-info">
+                                    <p>Judge Mike Smith</p>
+                                    <br>
+                                    <p>Disorderly Conduct</p>
+                                    <p>4 other counts</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="panel-column">
+            <div class="info-panel comms-panel">
+                <h2><strong>Communication Log</strong></h2>
+                <div class="frame comms-frame">
+                    <div class="comms-div">
+                        <div class="comms-header">
+                            <div class="comms-info">
+                                <div class="left-align">
+                                    <div class="profile-info">
+                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                            alt="User Avatar" />
+                                        <div class="comms-name">John Doe</div>
+                                    </div>
+                                    <div class="comms-time">5/27/2023 10:00 AM</div>
+                                </div>
+                                <div class="right-align">
+                                    <div class="comms-method">Email with </div>
+                                    <div class="profile-info">
+                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                            alt="Contact Avatar" />
+                                        <div class="comms-recipient">Jane Smith</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comms-card">
+                            <div class="comms-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
+                                    sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
+                                    arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comms-div">
+                        <div class="comms-header">
+                            <div class="comms-info">
+                                <div class="left-align">
+                                    <div class="profile-info">
+                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                            alt="User Avatar" />
+                                        <div class="comms-name">John Doe</div>
+                                    </div>
+                                    <div class="comms-time">5/27/2023 10:00 AM</div>
+                                </div>
+                                <div class="right-align">
+                                    <div class="comms-method">Email with </div>
+                                    <div class="profile-info">
+                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                            alt="Contact Avatar" />
+                                        <div class="comms-recipient">Jane Smith</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comms-card">
+                            <div class="comms-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
+                                    sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
+                                    arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comms-div">
+                        <div class="comms-header">
+                            <div class="comms-info">
+                                <div class="left-align">
+                                    <div class="profile-info">
+                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                            alt="User Avatar" />
+                                        <div class="comms-name">John Doe</div>
+                                    </div>
+                                    <div class="comms-time">5/27/2023 10:00 AM</div>
+                                </div>
+                                <div class="right-align">
+                                    <div class="comms-method">Email with </div>
+                                    <div class="profile-info">
+                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                            alt="Contact Avatar" />
+                                        <div class="comms-recipient">Jane Smith</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comms-card">
+                            <div class="comms-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
+                                    sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
+                                    arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

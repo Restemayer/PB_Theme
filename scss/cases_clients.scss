@@ -1,0 +1,149 @@
+@import './main.scss';
+@import './sorting_filtering';
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+    margin: 0 10px;
+  }
+  
+  .card-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .grid-item {
+    background-color: $color-primary;
+    height: 150px;
+    max-width: 400px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+    /* Add transition for smooth effect on hover */
+  
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 5px $color-success;
+    }
+  
+  
+    .card-header {
+      background-color: yellow;
+      padding: 3px;
+      border-radius: 3px;
+      color: $color-secondary;
+      margin-bottom: 10px;
+      font-size: 1em;
+  
+      .card-title {
+        text-decoration: underline;
+        font-weight: bold;
+      }
+  
+      .client-card {
+        font-size: 1.5em;
+        text-decoration: none;
+      }
+    }
+  
+    .client-card-header {
+      background-color: #FEFBEA;
+    }
+  
+    .card-body {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-column-gap: 10px;
+      /* Spacing between the columns */
+  
+      .client-pic {
+        border: 1px solid black;
+        padding: 3px;
+        display: flex;
+        /* Center the image vertically and horizontally */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        /* 1/3 of the available space */
+        height: 0;
+        padding-bottom: 100%;
+        margin-right: 10px;
+        /* Spacing between the image and the text */
+        flex-grow: 1;
+        position: relative;
+  
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+        }
+  
+      }
+  
+      .card-info {
+        max-width: 100%;
+        color: $color-secondary;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: min(12px, max(6px, 50vw/2));
+      }
+    }
+  }
+  
+  .client-card-footer {
+    color: $color-secondary;
+    margin-top: 2px;
+  }
+  
+  .client-grid-item {
+    height: 180px;
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+  
+    .address-column {
+      display: flex;
+      margin-bottom: 5px;
+  
+      .address-type {
+        font-weight: bold;
+        width: 40px;
+        margin-right: 5px;
+      }
+  
+      .address-info {
+        flex-grow: 1;
+      }
+    }
+  }
+  
+  .phone {
+    display: flex;
+    flex-direction: column;
+  
+    .phone-column {
+      display: flex;
+      margin-bottom: 5px;
+  
+      .phone-type {
+        font-weight: bold;
+        width: 40px;
+        margin-right: 5px;
+      }
+  
+      .phone-info {
+        flex-grow: 1;
+      }
+    }
+  }
+

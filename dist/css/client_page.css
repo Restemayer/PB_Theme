@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* SCSS HEX */
+/* SCSS HSL */
+/* SCSS RGB */
+/* SCSS Gradient */
+html {
+  font-family: figtree;
+  font-size: 12px;
+}
+
+body {
+  background: rgb(54, 54, 54);
+  color: white;
+}
+
+.end-page {
+  margin-top: 20px;
+}
+
+.client_header_div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(147, 198, 214);
+  border-radius: 10px;
+  margin: 10px;
+  max-width: 50%;
+  width: auto;
+}
+.panel .edit-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 20px;
+  width: 20px;
+  padding: 2px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+}
+.panel .edit-button:active {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transform: translate(1px, 1px);
+}
+.panel .photo-container {
+  position: relative;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.panel .photo-container .contact-photo {
+  height: 100px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.panel .photo-container .photo-date {
+  position: relative;
+  width: 100%;
+  margin-top: 3px;
+  text-align: center;
+  font-size: 0.9em;
+  /* Adjust this value if you want to change the size of the text */
+  color: rgba(0, 0, 0, 0.6);
+  /* Adjust this value if you want to change the color of the text */
+}
+.panel .contact-info .contact-name {
+  font-size: 2.2em;
+  margin-bottom: 5px;
+}
+.panel .contact-info .contact-dob {
+  font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.6);
+}
+.panel .contact-info .contact-tags {
+  margin: 5px 0;
+}
+.panel .contact-info .contact-tags .tag {
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 3px;
+  margin: 0 5px 0 0;
+  background-color: antiquewhite;
+  border-radius: 10%;
+  align-self: center;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.panel-row {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.panel-row .info-panel {
+  margin: 10px;
+}
+.panel-row .info-panel h2 {
+  color: rgb(147, 198, 214);
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.panel-row .info-panel .frame {
+  background-color: rgb(54, 54, 54);
+  border: 2px solid rgb(147, 198, 214);
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 10%;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.panel-row .info-panel .frame a.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+.panel-row .info-panel .frame a.card-link .grid-item {
+  background-color: rgb(147, 198, 214);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.panel-row .info-panel .frame a.card-link .grid-item .card-header {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.panel-row .info-panel .frame a.card-link .grid-item .card-header .card-title {
+  margin: 0;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.panel-row .info-panel .frame a.card-link .grid-item .card-body {
+  padding: 10px 10px 0 10px;
+}
+.panel-row .info-panel .frame a.card-link .grid-item .card-body p {
+  color: #000;
+}
+.panel-row .info-panel .info-category h3 {
+  color: rgb(147, 198, 214);
+  margin-bottom: 10px;
+  font-size: 1em;
+  font-weight: bold;
+}
+.panel-row .info-panel .info-category .info-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(147, 198, 214);
+  color: rgb(54, 54, 54);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.panel-row .info-panel .info-category .info-card .card-content {
+  max-width: 70%;
+}
+.panel-row .info-panel .info-category .info-card .card-content h4 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.panel-row .info-panel .info-category .info-card .button-view {
+  background-color: white;
+  padding: 2px;
+  border: 1px solid black;
+  border-radius: 10%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.panel-row .info-panel .info-category .info-card .button-view img {
+  max-width: auto;
+  max-height: 15px;
+}
+.panel-row .info-panel .info-category .info-card .button-view:active {
+  transform: scale(0.95);
+}
+
+.button-card {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.button-card:active {
+  transform: scale(0.95);
+}
+
+.add-button-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-button {
+  height: auto;
+  max-height: 30px;
+  width: auto;
+}
+
+.comms-frame {
+  max-width: 33%;
+}
+.comms-frame > *:not(:last-child) {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 3px ridge rgb(147, 198, 214);
+}
+
+.comms-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.comms-header .comms-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.comms-header .comms-info .left-align, .comms-header .comms-info .right-align {
+  display: flex;
+  align-items: center;
+}
+.comms-header .comms-info .profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comms-header .comms-info .profile-info .comms-avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.comms-header .comms-info .profile-info .comms-name, .comms-header .comms-info .profile-info .comms-recipient {
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+.comms-header .comms-info .comms-time, .comms-header .comms-info .comms-method {
+  font-size: 1em;
+  margin: 5px;
+}
+
+.comms-card {
+  background-color: rgb(147, 198, 214);
+  border-radius: 10px;
+  padding: 20px;
+  color: rgb(54, 54, 54);
+}/*# sourceMappingURL=client_page.css.map */
