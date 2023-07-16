@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header>
+    <header>  <!-- Header/navbar not copied in production. Already set in seperate module -->
         <nav>
             <div class="main-menu left-items">
                 <a href="/">
@@ -96,9 +96,9 @@
                 </a>
             </div>
         </nav>
-    </header>
-    <div class="client_header_div">
-        <div class="panel">
+    </header> <!-- End of website header/navbar -->
+    <div class="client_header_div panel-row">  
+        <div class="panel panel-column">
             <img class="edit-button" src="images/edit-icons/pencil-icon.png" alt="Edit">
             <div class="photo-container">
                 <img class="contact-photo" src="images/contact-photos/default-avatar.png" alt="contact photo" />
@@ -111,6 +111,32 @@
                     <span class="tag">Client</span>
                     <span class="tag">Paralegal</span>
                 </div>
+            </div>            
+        </div>
+        <div class="last_eval_panel panel-column">                       
+            <div class="info-panel">
+                <h2><strong>Last Evaluation</strong></h2> 
+                <div class="frame">
+                    <div class="info-category">
+                        <div class="info-card no-pad">
+                            <div class="card-content">
+                                <h4>Qualified</h4>
+                                <p>May 27, 2023</p>
+                            </div>
+                            <div class="button-panel">
+                                <div class="button-view">
+                                    <img src="images/edit-icons/plus-icon.png" alt="Add">
+                                </div>      
+                                <div class="button-view">
+                                    <img src="images/edit-icons/eye-icon.png" alt="View">
+                                </div> 
+                                <div class="button-view">
+                                    <img src="images/edit-icons/pencil-icon.png" alt="Edit">
+                                </div>
+                            </div>                
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -121,28 +147,28 @@
                 <div class="frame">
                     <div class="info-category">
                         <h3>Addresses</h3>
-                        <div class="info-card home-address">
+                        <div class="info-card fill_background home-address">
                             <div class="card-content">
                                 <h4>Home</h4>
                                 <p>123 Main St</p>
                                 <p>Springfield, USA</p>
                             </div>
-                            <div class="view-button button-view">
+                            <div class="button-view">
                                 <img src="images/edit-icons/eye-icon.png" alt="View">
                             </div>
                         </div>
-                        <div class="info-card work-address">
+                        <div class="info-card fill_background work-address">
                             <div class="card-content">
                                 <h4>Work</h4>
                                 <p>ACME, Inc.</p>
                                 <p>456 Elm St</p>
                                 <p>Springfield, USA</p>
                             </div>
-                            <div class="view-button button-view">
+                            <div class="button-view">
                                 <img src="images/edit-icons/eye-icon.png" alt="View">
                             </div>
                         </div>
-                        <div class="info-card button-card">
+                        <div class="info-card fill_background button-card">
                             <div class="add-button-image">
                                 <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
                             </div>
@@ -150,25 +176,25 @@
                     </div>
                     <div class="info-category">
                         <h3>Phone Numbers</h3>
-                        <div class="info-card home-phone">
+                        <div class="info-card fill_background home-phone">
                             <div class="card-content">
                                 <h4>Home</h4>
                                 <p>(123) 456-7890</p>
                             </div>
-                            <div class="view-button button-view">
+                            <div class="button-view">
                                 <img src="images/edit-icons/eye-icon.png" alt="View">
                             </div>
                         </div>
-                        <div class="info-card work-phone">
+                        <div class="info-card fill_background work-phone">
                             <div class="card-content">
                                 <h4>Work</h4>
                                 <p>(098) 765-4321</p>
                             </div>
-                            <div class="view-button button-view">
+                            <div class="button-view">
                                 <img src="images/edit-icons/eye-icon.png" alt="View">
                             </div>
                         </div>
-                        <div class="info-card button-card">
+                        <div class="info-card fill_background button-card">
                             <div class="add-button-image">
                                 <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
                             </div>
@@ -176,25 +202,25 @@
                     </div>
                     <div class="info-category">
                         <h3>Emails</h3>
-                        <div class="info-card personal-email">
+                        <div class="info-card fill_background personal-email">
                             <div class="card-content">
                                 <h4>Personal</h4>
                                 <p>john.doe@example.com</p>
                             </div>
-                            <div class="view-button button-view">
+                            <div class="button-view">
                                 <img src="images/edit-icons/eye-icon.png" alt="View">
                             </div>
                         </div>
-                        <div class="info-card work-email">
+                        <div class="info-card fill_background work-email">
                             <div class="card-content">
                                 <h4>Work</h4>
                                 <p>john.doe@work.com</p>
                             </div>
-                            <div class="view-button button-view">
+                            <div class="button-view">
                                 <img src="images/edit-icons/eye-icon.png" alt="View">
                             </div>
                         </div>
-                        <div class="info-card button-card">
+                        <div class="info-card fill_background button-card">
                             <div class="add-button-image">
                                 <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
                             </div>

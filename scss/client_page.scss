@@ -95,109 +95,121 @@
 .panel-row {
     display: flex;
     justify-content: start;
-    align-items: start;
+    align-items: start;   
+}
 
-    .info-panel {
-        margin: 10px;
+.info-panel {
+    margin: 10px;
 
-        h2 {
-            color: $color-primary;
-            font-size: 1.5em; // this will make the font twice as big as the normal font-size
-            font-weight: bold; // this will make the font bold
-            margin-bottom: 10px;
-        }
+    h2 {
+        color: $color-primary;
+        font-size: 1.5em; // this will make the font twice as big as the normal font-size
+        font-weight: bold; // this will make the font bold
+        margin-bottom: 10px;
+    }
 
-        .frame {
-            background-color: $color-secondary;
-            border: 2px solid $color-primary;
-            border-radius: 10px;
-            padding: 10px;
-            min-width: 10%;
-            width: fit-content;
+    .frame {
+        background-color: $color-secondary;
+        border: 2px solid $color-primary;
+        border-radius: 10px;
+        padding: 10px;
+        min-width: 10%;
+        width: fit-content;
 
-            a.card-link {
-                text-decoration: none;
-                color: inherit;
+        a.card-link {
+            text-decoration: none;
+            color: inherit;
 
-                .grid-item {
-                    background-color: $color-primary;
-                    border-radius: 10px;
-                    padding: 10px;
-                    margin: 5px 0;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); //optional
-
-                    .card-header {
-                        background-color: white;
-                        padding: 10px;
-                        border-radius: 10px; // round only top corners
-
-                        .card-title {
-                            margin: 0;
-                            font-weight: bold;
-                            margin-bottom: 5px;
-                        }
-
-                    }
-
-                    .card-body {
-                        padding: 10px 10px 0 10px;
-
-                        p {
-                            color: #000;
-                        }
-                    }
-                }
-            }
-        }
-
-        .info-category {
-            h3 {
-                color: $color-primary;
-                margin-bottom: 10px;
-                font-size: 1em; // this will make the font twice as big as the normal font-size
-                font-weight: bold; // this will make the font bold
-            }
-
-            .info-card {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+            .grid-item {
                 background-color: $color-primary;
-                color: $color-secondary;
-                padding: 10px;
                 border-radius: 10px;
-                margin-bottom: 10px;
-                width: 100%;
+                padding: 10px;
+                margin: 5px 0;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); //optional
 
-                .card-content {
-                    max-width: 70%;
+                .card-header {
+                    background-color: white;
+                    padding: 10px;
+                    border-radius: 10px;
 
-                    h4 {
+                    .card-title {
+                        margin: 0;
                         font-weight: bold;
-                        text-decoration: underline;
+                        margin-bottom: 5px;
                     }
+
                 }
 
-                .button-view {
-                    background-color: white;
-                    padding: 2px;
-                    border: 1px solid black;
-                    border-radius: 10%;
-                    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-                    cursor: pointer;
-                    transition: all 0.2s ease-in-out;
+                .card-body {
+                    padding: 10px 10px 0 10px;
 
-                    img {
-                        max-width: auto;
-                        max-height: 15px;
-                    }
-
-                    &:active {
-                        transform: scale(0.95);
+                    p {
+                        color: #000;
                     }
                 }
             }
         }
+    }
+
+    .info-category {
+        h3 {
+            color: $color-primary;
+            margin-bottom: 10px;
+            font-size: 1em; // this will make the font twice as big as the normal font-size
+            font-weight: bold; // this will make the font bold
+        }
+
+        .info-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;            
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+
+            .card-content {
+                max-width: 70%;
+                margin-right: 5px;
+
+                h4 {
+                    font-weight: bold;
+                    text-decoration: underline;
+                }
+            }               
+        }
+    }
+}
+
+.button-panel div {
+    margin: 2px;
+}
+.no-pad {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.fill_background {
+    background-color: $color-primary;
+    color: $color-secondary;
+}
+
+.button-view {
+    background-color: white;
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 10%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+
+    img {
+        max-width: auto;
+        max-height: 15px;        
+    }
+
+    &:active {
+        transform: scale(0.95);
     }
 }
 
