@@ -73,9 +73,11 @@ nav .center-items {
 .menu-item {
   border: 2px solid black;
   border-radius: 10px;
-  height: 4vh;
-  width: 4vh;
-  margin-left: 10px;
+  height: 3vh;
+  width: 3vh;
+  min-height: 25px;
+  min-width: 25px;
+  margin-left: 5px;
   position: relative;
   display: inline-block;
   transition: all 0.5s ease-in-out; /* Add transition for smooth effect on hover */
