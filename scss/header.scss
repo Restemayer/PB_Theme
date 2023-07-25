@@ -38,8 +38,8 @@ nav {
 .menu-item {
   border: 2px solid black;
   border-radius: 10px;
-  height: 3vh;
-  width: 3vh;
+  height: 4vh;
+  width: 4vh;
   margin-left: 10px;
   position: relative;
   display: inline-block;
@@ -48,7 +48,7 @@ nav {
       object-fit: contain;
       height: 100%;
       width: 100%;        
-      padding: 5px;        
+      padding: 4px;        
               
   }
 
@@ -87,8 +87,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background-color: red;
     color: white;
     font-size: 12px;

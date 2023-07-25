@@ -3,7 +3,7 @@
 .client_header_div {
     width: 100%;
     display: flex;
-    justify-content: flex-start; // or you could use 'flex-start' instead
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
@@ -90,7 +90,13 @@
     }
 }
 
+.panel-column {
+    margin-right: 10px;
 
+    &:first-child {
+        margin-left: 10px;
+    }
+}
 
 .panel-row {
     display: flex;
@@ -98,8 +104,7 @@
     align-items: start;   
 }
 
-.info-panel {
-    margin: 10px;
+
 
     h2 {
         color: $color-primary;
@@ -113,29 +118,33 @@
         border: 2px solid $color-primary;
         border-radius: 10px;
         padding: 10px;
-        min-width: 10%;
+        min-width: 100%;
         width: fit-content;
 
         a.card-link {
             text-decoration: none;
             color: inherit;
+            
 
             .grid-item {
                 background-color: $color-primary;
                 border-radius: 10px;
                 padding: 10px;
-                margin: 5px 0;
+                margin: 10px 0;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); //optional
+                
 
                 .card-header {
                     background-color: white;
                     padding: 10px;
                     border-radius: 10px;
+                    
 
                     .card-title {
                         margin: 0;
                         font-weight: bold;
                         margin-bottom: 5px;
+                        
                     }
 
                 }
@@ -179,7 +188,7 @@
             }               
         }
     }
-}
+
 
 .button-panel div {
     margin: 2px;

@@ -99,8 +99,7 @@ body {
 .panel .photo-container .contact-photo {
   height: 100px;
   width: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
 }
 .panel .photo-container .photo-date {
@@ -135,64 +134,69 @@ body {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.panel-column {
+  margin-right: 10px;
+}
+.panel-column:first-child {
+  margin-left: 10px;
+}
+
 .panel-row {
   display: flex;
   justify-content: start;
   align-items: start;
 }
 
-.info-panel {
-  margin: 10px;
-}
-.info-panel h2 {
+h2 {
   color: rgb(147, 198, 214);
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 10px;
 }
-.info-panel .frame {
+
+.frame {
   background-color: rgb(54, 54, 54);
   border: 2px solid rgb(147, 198, 214);
   border-radius: 10px;
   padding: 10px;
-  min-width: 10%;
-  width: -moz-fit-content;
+  min-width: 100%;
   width: fit-content;
 }
-.info-panel .frame a.card-link {
+.frame a.card-link {
   text-decoration: none;
   color: inherit;
 }
-.info-panel .frame a.card-link .grid-item {
+.frame a.card-link .grid-item {
   background-color: rgb(147, 198, 214);
   border-radius: 10px;
   padding: 10px;
-  margin: 5px 0;
+  margin: 10px 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
-.info-panel .frame a.card-link .grid-item .card-header {
+.frame a.card-link .grid-item .card-header {
   background-color: white;
   padding: 10px;
   border-radius: 10px;
 }
-.info-panel .frame a.card-link .grid-item .card-header .card-title {
+.frame a.card-link .grid-item .card-header .card-title {
   margin: 0;
   font-weight: bold;
   margin-bottom: 5px;
 }
-.info-panel .frame a.card-link .grid-item .card-body {
+.frame a.card-link .grid-item .card-body {
   padding: 10px 10px 0 10px;
 }
-.info-panel .frame a.card-link .grid-item .card-body p {
+.frame a.card-link .grid-item .card-body p {
   color: #000;
 }
-.info-panel .info-category h3 {
+
+.info-category h3 {
   color: rgb(147, 198, 214);
   margin-bottom: 10px;
   font-size: 1em;
   font-weight: bold;
 }
-.info-panel .info-category .info-card {
+.info-category .info-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -201,11 +205,11 @@ body {
   margin-bottom: 10px;
   width: 100%;
 }
-.info-panel .info-category .info-card .card-content {
+.info-category .info-card .card-content {
   max-width: 70%;
   margin-right: 5px;
 }
-.info-panel .info-category .info-card .card-content h4 {
+.info-category .info-card .card-content h4 {
   font-weight: bold;
   text-decoration: underline;
 }
@@ -298,8 +302,7 @@ body {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .comms-header .comms-info .profile-info .comms-name, .comms-header .comms-info .profile-info .comms-recipient {
   font-size: 0.8em;
