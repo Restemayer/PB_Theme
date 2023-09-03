@@ -145,6 +145,7 @@
 
                     p {
                         color: #000;
+                        white-space: nowrap;
                     }
                 }
             }
@@ -239,7 +240,7 @@
 }
 
 .comms-frame {
-    max-width: 33%;
+    max-width: 40%;
     > *:not(:last-child) {
         margin-bottom: 15px;
         padding-bottom: 15px;
@@ -264,31 +265,33 @@
             //flex-direction: column;
             align-items: center;
         }
-
-        .profile-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .comms-avatar {
-                height: 30px;
-                width: 30px;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-
-            .comms-name, .comms-recipient {
-                font-size: 0.8em;
-                margin-top: 5px;
-            }
-        }
-
-        .comms-time, .comms-method {
-            font-size: 1em;
-            //margin-top: 5px;
-            margin: 5px;
-        }
     }
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .comms-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .comms-name, .comms-recipient {
+        font-size: 0.8em;
+        margin-top: 5px;
+        white-space: nowrap;
+    }
+}
+
+.comms-time, .comms-method {
+    font-size: 1em;
+    //margin-top: 5px;
+    margin: 5px;
+    white-space: nowrap;
 }
 
 .comms-card {

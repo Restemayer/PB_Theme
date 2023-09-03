@@ -185,6 +185,7 @@ body {
 }
 .info-panel .frame a.card-link .grid-item .card-body p {
   color: #000;
+  white-space: nowrap;
 }
 .info-panel .info-category h3 {
   color: rgb(147, 198, 214);
@@ -267,7 +268,7 @@ body {
 }
 
 .comms-frame {
-  max-width: 33%;
+  max-width: 40%;
 }
 .comms-frame > *:not(:last-child) {
   margin-bottom: 15px;
@@ -289,25 +290,29 @@ body {
   display: flex;
   align-items: center;
 }
-.comms-header .comms-info .profile-info {
+
+.profile-info {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.comms-header .comms-info .profile-info .comms-avatar {
+.profile-info .comms-avatar {
   height: 30px;
   width: 30px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.comms-header .comms-info .profile-info .comms-name, .comms-header .comms-info .profile-info .comms-recipient {
+.profile-info .comms-name, .profile-info .comms-recipient {
   font-size: 0.8em;
   margin-top: 5px;
+  white-space: nowrap;
 }
-.comms-header .comms-info .comms-time, .comms-header .comms-info .comms-method {
+
+.comms-time, .comms-method {
   font-size: 1em;
   margin: 5px;
+  white-space: nowrap;
 }
 
 .comms-card {
