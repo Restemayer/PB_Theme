@@ -55,39 +55,6 @@ body {
   margin-top: 20px;
 }
 
-.client_header_div {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.eval-status {
-  padding: 5px;
-  border-radius: 10px;
-}
-
-.good-eval {
-  background-color: green;
-}
-.good-eval h4, .good-eval p {
-  color: white;
-}
-
-.needs-eval {
-  background-color: yellow;
-}
-.needs-eval h4, .needs-eval p {
-  color: black;
-}
-
-.bad-eval {
-  background-color: red;
-}
-.bad-eval h4, .bad-eval p {
-  color: white;
-}
-
 .panel {
   position: relative;
   display: flex;
@@ -99,66 +66,13 @@ body {
   max-width: 50%;
   width: auto;
 }
-.panel .edit-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  height: 20px;
-  width: 20px;
-  padding: 2px;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 10%;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  transition: 0.2s;
-}
-.panel .edit-button:active {
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  transform: translate(1px, 1px);
-}
-.panel .photo-container {
-  position: relative;
-  margin-right: 10px;
-  display: flex;
-  flex-direction: column;
-}
-.panel .photo-container .contact-photo {
-  height: 100px;
-  width: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-}
-.panel .photo-container .photo-date {
-  position: relative;
-  width: 100%;
-  margin-top: 3px;
-  text-align: center;
-  font-size: 0.9em;
-  /* Adjust this value if you want to change the size of the text */
-  color: rgba(0, 0, 0, 0.6);
-  /* Adjust this value if you want to change the color of the text */
-}
-.panel .contact-info .contact-name {
-  font-size: 2.2em;
+.panel .case-info .case-title {
+  font-size: 5em;
   margin-bottom: 5px;
 }
-.panel .contact-info .contact-dob {
+.panel .case-info .case-county-number {
   font-size: 1.5em;
   color: rgba(0, 0, 0, 0.6);
-}
-.panel .contact-info .contact-tags {
-  margin: 5px 0;
-}
-.panel .contact-info .contact-tags .tag {
-  font-size: 0.8em;
-  font-weight: bold;
-  padding: 3px;
-  margin: 0 5px 0 0;
-  background-color: antiquewhite;
-  border-radius: 10%;
-  align-self: center;
-  color: rgba(0, 0, 0, 0.8);
 }
 
 .panel-row {
@@ -226,7 +140,6 @@ h2 {
 }
 .frame a.card-link .grid-item .card-body p {
   color: #000;
-  white-space: nowrap;
 }
 
 .info-category h3 {
@@ -309,7 +222,7 @@ h2 {
 }
 
 .comms-frame {
-  max-width: 40%;
+  max-width: 33%;
 }
 .comms-frame > *:not(:last-child) {
   margin-bottom: 15px;
@@ -331,8 +244,6 @@ h2 {
   display: flex;
   align-items: center;
 }
-
-.profile-info {
 .comms-header .comms-info .comms-time, .comms-header .comms-info .comms-method {
   font-size: 1em;
   margin: 5px;
@@ -348,21 +259,12 @@ h2 {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.profile-info .comms-avatar {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .profile-info .note-icon {
   height: 30px;
   width: 30px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   background-color: rgb(147, 198, 214);
   border-radius: 5px;
   padding: 5px;
@@ -371,13 +273,6 @@ h2 {
 .profile-info .comms-name, .profile-info .comms-recipient {
   font-size: 0.8em;
   margin-top: 5px;
-  white-space: nowrap;
-}
-
-.comms-time, .comms-method {
-  font-size: 1em;
-  margin: 5px;
-  white-space: nowrap;
 }
 
 .comms-card {
@@ -385,4 +280,4 @@ h2 {
   border-radius: 10px;
   padding: 20px;
   color: rgb(54, 54, 54);
-}/*# sourceMappingURL=client_page.css.map */
+}/*# sourceMappingURL=case_page.css.map */

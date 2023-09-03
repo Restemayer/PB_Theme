@@ -40,7 +40,9 @@ nav {
   border-radius: 10px;
   height: 3vh;
   width: 3vh;
-  margin-left: 10px;
+  min-height: 25px;
+  min-width: 25px;
+  margin-left: 5px;
   position: relative;
   display: inline-block;
   transition: all 0.5s ease-in-out; /* Add transition for smooth effect on hover */   
@@ -48,7 +50,7 @@ nav {
       object-fit: contain;
       height: 100%;
       width: 100%;        
-      padding: 5px;        
+      padding: 4px;        
               
   }
 
@@ -87,8 +89,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background-color: red;
     color: white;
     font-size: 12px;

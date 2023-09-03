@@ -8,7 +8,7 @@
 
     <title>Wisconsin Public Defender ParalegalBot</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Figtree">
-    <link rel="stylesheet" href="./css/client_page.css" />
+    <link rel="stylesheet" href="./css/case_page.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <script src="js/numberbubble.js"></script>
     <script src="js/county_color.js"></script>
@@ -97,68 +97,52 @@
             </div>
         </nav>
     </header> <!-- End of website header/navbar -->
-    <div class="client_header_div panel-row">  
-        <div class="panel panel-column">
-            <img class="edit-button" src="images/edit-icons/pencil-icon.png" alt="Edit">
-            <div class="photo-container">
-                <img class="contact-photo" src="images/contact-photos/default-avatar.png" alt="contact photo" />
-                <div class="photo-date">Photo: 5/27/2023</div>
-            </div>
-            <div class="contact-info">
-                <div class="contact-name">Longestname Imaginablewithmanysuffixes</div>
-                <div class="contact-dob">March 1980 (43 years old)</div>
-                <div class="contact-tags">
-                    <span class="tag">Client</span>
-                    <span class="tag">Paralegal</span>
-                </div>
+    <div class="case_header_div panel-row">  
+        <div class="panel panel-column">            
+            <div class="case-info">
+                <div class="case-title">State v. John Doe</div>
+                <div class="case-county-number">March 1980 (43 years old)</div>                
             </div>            
         </div>
         <div class="header-panel panel-column">                       
             <div class="info-panel">
-                <h2><strong>Last Evaluation</strong></h2> 
+                <h2><strong>Next Event</strong></h2> 
                 <div class="frame">
                     <div class="info-category">
                         <div class="info-card no-pad">
-                            <div class="card-content eval-status bad-eval">
-                                <h4>EXPIRED</h4>
+                            <div class="card-content">
+                                <h4>Status Conference</h4>
                                 <p>May 27, 2023</p>
-                            </div>
-                            <div class="button-panel">
-                                <div class="button-view">
-                                    <img src="images/edit-icons/plus-icon.png" alt="Add">
-                                </div>      
-                                <div class="button-view">
-                                    <img src="images/edit-icons/eye-icon.png" alt="View">
-                                </div> 
-                                <div class="button-view">
-                                    <img src="images/edit-icons/pencil-icon.png" alt="Edit">
-                                </div>
-                            </div>                
+                            </div>                           
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="panel-column">                       
+        <div class="header-panel panel-column">                       
             <div class="info-panel">
                 <h2><strong>Last Update</strong></h2> 
                 <div class="frame">
                     <div class="info-category">
                         <div class="info-card no-pad">
-                            <div class="card-content">
-                                <h4>Address Added: 123 Main St.</h4>
-                                <p>May 27, 2023 10:13 AM</p>                                
-                            </div>                 
-                            <div class="profile-info">
-                                <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
-                                    alt="User Avatar" />
-                                <div class="comms-name">John Doe</div>
+                            <div class="left-align">
+                                <div class="profile-info">
+                                    <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                        alt="User Avatar" />
+                                    <div class="comms-name">John Doe</div>
+                                </div>
                             </div>
-                            <div class="button-panel">                                
+                            <div class="card-content">
+                                
+                                <h4>May 27, 2023 9:45 A.M</h4>
+                                <br>
+                                <p>Added phone number (123) 456-7890</p>
+                            </div>
+                            <div class="button-panel">                                   
                                 <div class="button-view">
                                     <img src="images/edit-icons/eye-icon.png" alt="View">
                                 </div>
-                            </div>                                
+                            </div>                                   
                         </div>
                     </div>
                 </div>
@@ -266,12 +250,8 @@
                             </div>
                             <div class="card-body">
                                 <div class="card-info">
-                                    <p>Opened: June 27, 2023</p>
-                                    <br>
-                                    <p>Attorney: John Doe</p>
-                                    <p>Paralegal: Mike Smith</p>
-                                    <p>Investigator: Jane Reception</p>
-                                    <p>CSS: Jane Doe</p>
+                                    <p class="user-assigned">ASSIGNED</p>
+                                    <p>Judge Mike Smith</p>
                                     <br>
                                     <p>Disorderly Conduct</p>
                                     <p>4 other counts</p>
@@ -287,9 +267,8 @@
                             </div>
                             <div class="card-body">
                                 <div class="card-info">
-                                    <p>Opened: June 27, 2023</p>
-                                    <br>
-                                    <p>Unassigned</p>
+                                    <p class="user-assigned">ASSIGNED</p>
+                                    <p>Judge Mike Smith</p>
                                     <br>
                                     <p>Disorderly Conduct</p>
                                     <p>4 other counts</p>
@@ -305,9 +284,25 @@
                             </div>
                             <div class="card-body">
                                 <div class="card-info">
-                                    <p>Opened: June 27, 2023</p>
+                                    <p class="other-assigned">ASSIGNED TO ATTY. JOE SMITH (WAUSAU OFFICE)</p>
+                                    <p>Judge Mike Smith</p>
                                     <br>
-                                    <p>Pending Farm</p>
+                                    <p>Disorderly Conduct</p>
+                                    <p>4 other counts</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="card-link" href="https://www.example.com"
+                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                        <div class="grid-item">
+                            <div class="card-header">
+                                <p><span class="county">Langlade</span> Co. 2022CM0000053</p>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-info">
+                                    <p class="unassigned">NOT ASSIGNED</p>
+                                    <p>Judge Mike Smith</p>
                                     <br>
                                     <p>Disorderly Conduct</p>
                                     <p>4 other counts</p>
@@ -328,10 +323,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="card-info">
-                                    <p>Opened: June 27, 2022</p>
-                                    <p>Closed: June 27, 2023</p>
-                                    <br>
-                                    <p>Attorney: John Doe</p>
+                                    <p>Judge Mike Smith</p>
                                     <br>
                                     <p>Disorderly Conduct</p>
                                     <p>4 other counts</p>
@@ -347,10 +339,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="card-info">
-                                    <p>Opened: June 27, 2022</p>
-                                    <p>Closed: June 27, 2023</p>
-                                    <br>
-                                    <p>Attorney: John Doe</p>
+                                    <p>Judge Mike Smith</p>
                                     <br>
                                     <p>Disorderly Conduct</p>
                                     <p>4 other counts</p>
@@ -366,10 +355,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="card-info">
-                                    <p>Opened: June 27, 2022</p>
-                                    <p>Closed: June 27, 2023</p>
-                                    <br>
-                                    <p>Attorney: John Doe</p>
+                                    <p>Judge Mike Smith</p>
                                     <br>
                                     <p>Disorderly Conduct</p>
                                     <p>4 other counts</p>
