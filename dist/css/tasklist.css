@@ -1,0 +1,31 @@
+.tasklist-header {
+  display: flex;
+  align-items: center;
+}
+.tasklist-header h2 {
+  margin-right: 20px;
+}
+.tasklist-header .filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tasklist-header .filters label {
+  font-size: 0.75em;
+  white-space: nowrap;
+}
+.tasklist-header .filters input[type=checkbox] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.tasklist-header .filters select {
+  padding: 1px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 0.75em; /* Adjust the font size */
+}/*# sourceMappingURL=tasklist.css.map */

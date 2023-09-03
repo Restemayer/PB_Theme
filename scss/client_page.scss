@@ -57,59 +57,7 @@
             box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
             transform: translate(1px, 1px);
         }
-    }
-
-    .photo-container {
-        position: relative;
-        margin-right: 10px;
-        display: flex;
-        flex-direction: column;
-
-        .contact-photo {
-            height: 100px;
-            width: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .photo-date {
-            position: relative;
-            width: 100%;
-            margin-top: 3px;
-            text-align: center;
-            font-size: 0.9em;
-            /* Adjust this value if you want to change the size of the text */
-            color: rgba(0, 0, 0, 0.6);
-            /* Adjust this value if you want to change the color of the text */
-        }
-    }
-
-    .contact-info {
-        .contact-name {
-            font-size: 2.2em;
-            margin-bottom: 5px;
-        }
-
-        .contact-dob {
-            font-size: 1.5em;
-            color: rgba(0, 0, 0, 0.6);
-        }
-
-        .contact-tags {
-            margin: 5px 0;
-
-            .tag {
-                font-size: 0.8em;
-                font-weight: bold;
-                padding: 3px;
-                margin: 0 5px 0 0;
-                background-color: antiquewhite;
-                border-radius: 10%;
-                align-self: center;
-                color: rgba(0, 0, 0, 0.8);
-            }
-        }
-    }
+    }    
 }
 .panel-row {
     display: flex;
@@ -129,6 +77,7 @@
     }
 
     .info-panel {
+        margin-bottom: 10px;
         h2 {
           strong {
             white-space: nowrap; /* Prevents wrapping of "Related Cases" */
@@ -235,10 +184,6 @@
     padding: 0 !important;
     margin: 0 !important;
 }
-.fill_background {
-    background-color: $color-primary;
-    color: $color-secondary;
-}
 
 .button-view {
     background-color: white;
@@ -260,19 +205,6 @@
     }
 }
 
-.button-card {
-    display: flex;
-    align-items: center;
-    justify-content: center !important;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-
-    &:active {
-        transform: scale(0.95);
-    }
-}
-
 .add-button-image {
     display: flex;
     align-items: center;
@@ -285,81 +217,54 @@
     width: auto;
 }
 
-.comms-frame {
-    max-width: 40%;
-    > *:not(:last-child) {
-        margin-bottom: 15px;
-        padding-bottom: 15px;
-        border-bottom: 3px ridge $color-primary;
+.contact-info {
+    .contact-name {
+        font-size: 2.2em;
+        margin-bottom: 5px;
     }
-    
-}
-
-.comms-header {
-    display: flex;
-    justify-content: space-between;
-    //align-items: center;
-    margin-bottom: 10px;
-
-    .comms-info {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-
-        .left-align, .right-align {
-            display: flex;
-            //flex-direction: column;
-            align-items: center;
+  
+    .contact-dob {
+        font-size: 1.5em;
+        color: rgba(0, 0, 0, 0.6);
+    }
+  
+    .contact-tags {
+        margin: 5px 0;
+  
+        .tag {
+            font-size: 0.8em;
+            font-weight: bold;
+            padding: 3px;
+            margin: 0 5px 0 0;
+            background-color: antiquewhite;
+            border-radius: 10%;
+            align-self: center;
+            color: rgba(0, 0, 0, 0.8);
         }
     }
-}
+  }
 
-.profile-info {
+  .photo-container {
+    position: relative;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-    .comms-avatar {
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
+  
+    .contact-photo {
+        height: 100px;
+        width: 100px;
         object-fit: cover;
-    }
-    .comms-avatar {
-        height: 30px;
-        width: 30px;
         border-radius: 50%;
-        object-fit: cover;        
     }
-
-    .note-icon {
-        height: 30px;
-        width: 30px;
-        object-fit:contain;
-        background-color: $color-primary;
-        border-radius: 5px;
-        padding: 5px;
-        margin-left: 10px;
-    }
-
-    .comms-name, .comms-recipient {
-        font-size: 0.8em;
-        margin-top: 5px;
-        white-space: nowrap;
+  
+    .photo-date {
+        position: relative;
+        width: 100%;
+        margin-top: 3px;
+        text-align: center;
+        font-size: 0.9em;
+        /* Adjust this value if you want to change the size of the text */
+        color: rgba(0, 0, 0, 0.6);
+        /* Adjust this value if you want to change the color of the text */
     }
 }
-
-.comms-time, .comms-method {
-    font-size: 1em;
-    //margin-top: 5px;
-    margin: 5px;
-    white-space: nowrap;
-}
-
-.comms-card {
-    background-color: $color-primary;
-    border-radius: 10px;
-    padding: 20px;
-    color: $color-secondary;    
-}
-

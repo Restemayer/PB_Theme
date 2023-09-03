@@ -1,0 +1,42 @@
+@import './variables';
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    position: relative;
+
+    .tab {
+        padding: 10px 20px;
+        color: $color-primary;
+        background-color: $color-secondary;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        cursor: pointer;
+        margin-right: -5px;
+        border: 1px solid $color-primary;
+        border-bottom: 1px solid $color-primary;
+        position: relative; /* Add relative positioning to the tabs */
+        z-index: 1; /* Ensure that tabs are displayed above the content */
+        &.active {
+            border-bottom: none;
+            z-index: 2; /* Active tab is displayed on top */
+        }
+    }
+}
+.tabs::after {
+    content: '';
+    position: absolute;
+    bottom: 0px; /* Position the pseudo-element below the tabs */
+    left: 0;
+    width: 100%; /* Extend the pseudo-element to the full width */
+    border-bottom: 1px solid $color-primary; /* Create the bottom border */
+    z-index: 0; /* Place it behind the tabs */
+  }
+
+.tab-content {
+    display: none;
+
+    &.active {
+        display: block !important;
+    }
+}

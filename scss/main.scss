@@ -1,6 +1,8 @@
 @import './resets';
 @import './variables';
 
+
+
 html {
   font-family: figtree;
   font-size: 12px;
@@ -17,3 +19,111 @@ body {
 
 
 
+.comms-frame {
+  max-width: 40%;
+  > *:not(:last-child) {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 3px ridge $color-primary;
+  }
+  
+}
+
+.comms-header {
+  display: flex;
+  justify-content: space-between;
+  //align-items: center;
+  margin-bottom: 10px;
+
+  
+}
+.comms-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .left-align, .right-align {
+      display: flex;
+      align-items: center;
+  }
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .comms-avatar {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+  } 
+
+  .note-icon {
+      height: 30px;
+      width: 30px;
+      object-fit:contain;
+      background-color: $color-primary;
+      border-radius: 5px;
+      padding: 5px;
+      margin-left: 10px;
+  }
+}
+
+.comms-name, .comms-recipient, .permission-name {
+  font-size: 0.8em;
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+.comms-time, .comms-method {
+  font-size: 1em;
+  //margin-top: 5px;
+  margin: 5px;
+  white-space: nowrap;
+}
+
+.comms-card {
+  background-color: $color-primary;
+  border-radius: 10px;
+  padding: 20px;
+  color: $color-secondary;    
+}
+
+.permission-info {
+  display: flex;
+  align-items: center; /* Vertically center align items */
+  margin-bottom: 10px;
+  
+  .permission-card {
+    margin-inline: 5px; /* Add 5px space between items */
+    background-color: $color-primary;
+    padding: 10px;
+    border-radius: 10px;
+    p {
+      color: $color-secondary;
+    }
+  }
+}
+
+.fill_background {
+  background-color: $color-primary;
+  color: $color-secondary;
+}
+
+.button-card {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+
+  &:active {
+      transform: scale(0.95);
+  }
+}

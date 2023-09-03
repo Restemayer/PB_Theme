@@ -55,6 +55,108 @@ body {
   margin-top: 20px;
 }
 
+.comms-frame {
+  max-width: 40%;
+}
+.comms-frame > *:not(:last-child) {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 3px ridge rgb(147, 198, 214);
+}
+
+.comms-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.comms-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.comms-info .left-align, .comms-info .right-align {
+  display: flex;
+  align-items: center;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-info .comms-avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profile-info .note-icon {
+  height: 30px;
+  width: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: rgb(147, 198, 214);
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.comms-name, .comms-recipient, .permission-name {
+  font-size: 0.8em;
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+.comms-time, .comms-method {
+  font-size: 1em;
+  margin: 5px;
+  white-space: nowrap;
+}
+
+.comms-card {
+  background-color: rgb(147, 198, 214);
+  border-radius: 10px;
+  padding: 20px;
+  color: rgb(54, 54, 54);
+}
+
+.permission-info {
+  display: flex;
+  align-items: center; /* Vertically center align items */
+  margin-bottom: 10px;
+}
+.permission-info .permission-card {
+  margin-inline: 5px; /* Add 5px space between items */
+  background-color: rgb(147, 198, 214);
+  padding: 10px;
+  border-radius: 10px;
+}
+.permission-info .permission-card p {
+  color: rgb(54, 54, 54);
+}
+
+.fill_background {
+  background-color: rgb(147, 198, 214);
+  color: rgb(54, 54, 54);
+}
+
+.button-card {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.button-card:active {
+  transform: scale(0.95);
+}
+
 .panel {
   position: relative;
   display: flex;
@@ -160,6 +262,7 @@ h2 {
 .info-category .info-card .card-content {
   max-width: 70%;
   margin-right: 5px;
+  white-space: nowrap;
 }
 .info-category .info-card .card-content h4 {
   font-weight: bold;
@@ -197,18 +300,6 @@ h2 {
   transform: scale(0.95);
 }
 
-.button-card {
-  display: flex;
-  align-items: center;
-  justify-content: center !important;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-.button-card:active {
-  transform: scale(0.95);
-}
-
 .add-button-image {
   display: flex;
   align-items: center;
@@ -221,63 +312,12 @@ h2 {
   width: auto;
 }
 
-.comms-frame {
-  max-width: 33%;
-}
-.comms-frame > *:not(:last-child) {
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-  border-bottom: 3px ridge rgb(147, 198, 214);
-}
-
-.comms-header {
+.employee {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 }
-.comms-header .comms-info {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.comms-header .comms-info .left-align, .comms-header .comms-info .right-align {
-  display: flex;
-  align-items: center;
-}
-.comms-header .comms-info .comms-time, .comms-header .comms-info .comms-method {
-  font-size: 1em;
-  margin: 5px;
-}
-
-.profile-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.employee .employee-profile, .employee .employee-data {
+  white-space: nowrap;
   margin-right: 10px;
-}
-.profile-info .comms-avatar {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.profile-info .note-icon {
-  height: 30px;
-  width: 30px;
-  object-fit: contain;
-  background-color: rgb(147, 198, 214);
-  border-radius: 5px;
-  padding: 5px;
-  margin-left: 10px;
-}
-.profile-info .comms-name, .profile-info .comms-recipient {
-  font-size: 0.8em;
-  margin-top: 5px;
-}
-
-.comms-card {
-  background-color: rgb(147, 198, 214);
-  border-radius: 10px;
-  padding: 20px;
-  color: rgb(54, 54, 54);
 }/*# sourceMappingURL=case_page.css.map */
