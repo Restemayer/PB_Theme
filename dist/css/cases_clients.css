@@ -157,6 +157,36 @@ body {
   transform: scale(0.95);
 }
 
+.panel-column {
+  margin-right: 10px;
+}
+.panel-column:first-child {
+  margin-left: 10px;
+}
+.panel-column .info-panel {
+  margin-bottom: 10px;
+}
+.panel-column .info-panel h2 strong {
+  white-space: nowrap; /* Prevents wrapping of "Related Cases" */
+}
+
+.frame-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3px;
+}
+.frame-title h2 {
+  margin: 0;
+}
+.frame-title .button-panel {
+  display: flex;
+}
+.frame-title .button-panel .button-view {
+  margin: 0;
+  margin-right: 10px;
+}
+
 .filter-options {
   margin-top: 10px;
   display: flex;

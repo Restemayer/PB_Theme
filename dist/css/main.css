@@ -185,4 +185,8 @@ body {
 .frame-title .button-panel .button-view {
   margin: 0;
   margin-right: 10px;
+}
+
+.zero-left-margin {
+  margin-left: 0 !important;
 }/*# sourceMappingURL=main.css.map */

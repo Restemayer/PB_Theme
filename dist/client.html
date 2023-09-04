@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/tasklist.css" />
     <script src="js/numberbubble.js"></script>
     <script src="js/county_color.js"></script>
+    <script src="js/tasklist.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 </head>
@@ -282,23 +283,17 @@
                             <select id="case" name="case">
                                 <option value="all">All</option>
                                 <option value="none">None</option>
-                                <option value="22CM53">Lincoln 2022CM0000053</option>
-                                <option value="23CM53">Langlade 2023CM0000053</option>
                                 <!-- Add more options here -->
                             </select>
-                            <label for="assigned-to">Assigned To</label>
-                            <select id="assigned-to" name="assigned-to">
+                            <label for="assigned_to">Assigned To</label>
+                            <select id="assigned_to" name="assigned_to">
                                 <option value="user">Myself</option>
                                 <option value="all">All</option>
-                                <option value="john-doe">John Doe</option>
-                                <option value="Joe Paralegal">Work</option>
                                 <!-- Add more options here -->
                             </select>
                             <label for="category">Category</label>
                             <select id="category" name="category">
                                 <option value="all">All</option>
-                                <option value="personal">Personal</option>
-                                <option value="work">Work</option>
                                 <!-- Add more options here -->
                             </select>
                             <label for="sorter">Sort by</label>
@@ -318,6 +313,7 @@
                                     <th>Cancel</th>
                                     <th>Case</th>
                                     <th>Task</th>
+				                    <th>Category</th>
                                     <th>Date Assigned</th>
                                     <th>Assigned to</th>
                                     <th>Date Due</th>
@@ -325,11 +321,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr data-sorts='{"user" : "0", "complete" : "0", "canceled" : "0", "case" : "Langlade 2023CM0000053", "category" : "Scheduling", "assigned_to_num" : "0", "assigned_to" : "John Doe", "date_assigned" : "2023-05-15", "date_due" : "2023-06-01"}'>
                                     <td><input type="checkbox" /></td>
                                     <td><input type="checkbox" /></td>
                                     <td>Langlade 2023CM0000053</td>
                                     <td>Sample Task 1</td>
+				                    <td>Scheduling</td>
                                     <td>2023-05-15</td>
                                     <td>John Doe</td>
                                     <td>2023-06-01</td>
@@ -339,11 +336,27 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr data-sorts='{"user" : "0", "complete" : "0", "canceled" : "0", "case" : "Lincoln 2022CM0000053", "category" : "Motion Practice", "assigned_to_num" : "1", "assigned_to" : "Joe Paralegal", "date_assigned" : "2023-05-20", "date_due" : "2023-06-10"}'>
                                     <td><input type="checkbox" /></td>
                                     <td><input type="checkbox" /></td>
                                     <td>Lincoln 2022CM0000053</td>
                                     <td>Sample Task 2</td>
+				                    <td>Motion Practice</td>
+                                    <td>2023-05-20</td>
+                                    <td>Joe Paralegal</td>
+                                    <td>2023-06-10</td>
+                                    <td>
+                                        <div class="button-view">
+                                            <img src="images/edit-icons/pencil-icon.png" alt="Edit">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-sorts='{"user" : "0", "complete" : "1", "canceled" : "0", "case" : "Lincoln 2022CM0000053", "category" : "File Management", "assigned_to_num" : "1", "assigned_to" : "Joe Paralegal", "date_assigned" : "2023-04-20", "date_due" : "2023-05-10"}'>
+                                    <td><input type="checkbox" checked/></td>
+                                    <td><input type="checkbox" /></td>
+                                    <td>Lincoln 2022CM0000053</td>
+                                    <td>Complete Task 3</td>
+				                    <td>File Management</td>
                                     <td>2023-05-20</td>
                                     <td>Joe Paralegal</td>
                                     <td>2023-06-10</td>
@@ -553,10 +566,8 @@
                                 <div class="permission-card">
                                     <div class="permission-body">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis
-                                            ex, ac
-                                            sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum
-                                            fermentum,
-                                            arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
+                                            ex, ac sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum
+                                            fermentum, arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
                                     </div>
                                 </div>
                                 <div class="button-view">

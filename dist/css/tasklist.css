@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   white-space: nowrap;
+  width: 100%;
 }
 .tasklist-header h2 {
   margin-right: 20px;

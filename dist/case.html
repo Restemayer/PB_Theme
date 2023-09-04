@@ -15,6 +15,7 @@
     <script src="js/numberbubble.js"></script>
     <script src="js/county_color.js"></script>
     <script src="js/tabs.js"></script>
+    <script src="js/tasklist.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 </head>
@@ -155,6 +156,7 @@
         <div class="tab active" data-target="tab1">Case Information</div>
         <div class="tab" data-target="tab2">CCAP/Filings</div>
         <div class="tab" data-target="tab3">Discovery</div>
+        <div class="tab" data-target="tab4">Drafts & Documents</div>
       </div>
       
       <div class="tab-content active" id="tab1">
@@ -260,6 +262,161 @@
                 </div>
             </div>
             <div class="panel-column">
+                <div class="panel-row">
+                    <div class="info-panel">                    
+                        <div class="frame-title">
+                            <h2><strong>Tasks</strong></h2>
+                            <div class="button-panel">                            
+                                <div class="button-view">
+                                    <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="frame">
+                            <div class="tasklist-header">
+                                <div class="filters">
+                                    <label for="showComplete">Show Complete</label>
+                                    <input type="checkbox" id="showComplete" name="showComplete">
+                                    <label for="showCanceled">Show Canceled</label>
+                                    <input type="checkbox" id="showCanceled" name="showCanceled">                                
+                                    <label for="assigned_to">Assigned To</label>
+                                    <select id="assigned_to" name="assigned_to">
+                                        <option value="user">Myself</option>
+                                        <option value="all">All</option>
+                                        <!-- Add more options here -->
+                                    </select>
+                                    <label for="category">Category</label>
+                                    <select id="category" name="category">
+                                        <option value="all">All</option>
+                                        <!-- Add more options here -->
+                                    </select>
+                                    <label for="sorter">Sort by</label>
+                                    <select id="sorter" name="sorter">
+                                        <option value="due-date">Due Date</option>
+                                        <option value="category">Category</option>
+                                        <option value="assigned-date">Assigned Date</option>
+                                        <!-- Add more options here -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="task-list">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Complete</th>
+                                            <th>Cancel</th>
+                                            <th>Task</th>
+                                            <th>Category</th>
+                                            <th>Date Assigned</th>
+                                            <th>Assigned to</th>
+                                            <th>Date Due</th>
+                                            <th>View/Edit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-sorts='{"user" : "0", "complete" : "0", "canceled" : "0", "category" : "Scheduling", "assigned_to_num" : "0", "assigned_to" : "Attorney", "date_assigned" : "2023-05-15", "date_due" : "2023-06-01"}'>
+                                            <td><input type="checkbox" /></td>
+                                            <td><input type="checkbox" /></td>
+                                            <td>Schedule client appearance from prison</td>
+                                            <td>Scheduling</td>
+                                            <td>2023-05-15</td>
+                                            <td>Attorney</td>
+                                            <td>2023-06-01</td>
+                                            <td>
+                                                <div class="button-view">
+                                                    <img src="images/edit-icons/pencil-icon.png" alt="Edit">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-sorts='{"user" : "0", "complete" : "0", "canceled" : "0", "category" : "Motion Practice", "assigned_to_num" : "1", "assigned_to" : "Paralegal", "date_assigned" : "2023-05-20", "date_due" : "2023-06-10"}'>
+                                            <td><input type="checkbox" /></td>
+                                            <td><input type="checkbox" /></td>
+                                            <td>Sample Task 2</td>
+                                            <td>Motion Practice</td>
+                                            <td>2023-05-20</td>
+                                            <td>Paralegal</td>
+                                            <td>2023-06-10</td>
+                                            <td>
+                                                <div class="button-view">
+                                                    <img src="images/edit-icons/pencil-icon.png" alt="Edit">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-sorts='{"user" : "0", "complete" : "1", "canceled" : "0", "category" : "File Management", "assigned_to_num" : "1", "assigned_to" : "Paralegal", "date_assigned" : "2023-04-20", "date_due" : "2023-05-10"}'>
+                                            <td><input type="checkbox" checked/></td>
+                                            <td><input type="checkbox" /></td>
+                                            <td>Complete Task 3</td>
+                                            <td>File Management</td>
+                                            <td>2023-05-20</td>
+                                            <td>Paralegal</td>
+                                            <td>2023-06-10</td>
+                                            <td>
+                                                <div class="button-view">
+                                                    <img src="images/edit-icons/pencil-icon.png" alt="Edit">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>                     
+                    </div> 
+                </div>
+                <div class="panel-row">
+                    <div class="panel-column zero-left-margin">
+                        <div class="info-panel">
+                            <div class="frame-title">
+                                <h2><strong>Permissions</strong></h2>
+                                <div class="button-panel">                            
+                                    <div class="button-view">
+                                        <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frame">                  
+                                <div class="permission-info">
+                                    <a class="card-link" href="https://www.example.com">                                        
+                                    <div class="profile-info">
+                                        <div class="permission-relationship">Father</div>          
+                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                            alt="User Avatar" />
+                                        <div class="permission-name">John Doe</div>
+                                    </div>
+                                </a>                      
+                                    <div class="permission-card">
+                                        <div class="permission-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
+                                                sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
+                                                arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
+                                        </div>
+                                    </div>
+                                    <div class="button-view">
+                                        <img src="images/edit-icons/pencil-icon.png" alt="Edit">
+                                    </div>
+                                </div>
+                                <div class="permission-info">
+                                    <a class="card-link" href="https://www.example.com">                                        
+                                    <div class="profile-info">
+                                        <div class="permission-relationship">Mother</div>          
+                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                            alt="User Avatar" />
+                                        <div class="permission-name">Jane Doe</div>
+                                    </div>
+                                </a>                      
+                                    <div class="permission-card">
+                                        <div class="permission-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
+                                                sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
+                                                arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
+                                        </div>
+                                    </div>
+                                    <div class="button-view">
+                                        <img src="images/edit-icons/pencil-icon.png" alt="Edit">
+                                    </div>
+                                </div>                        
+                            </div>
+                        </div> 
                 <div class="info-panel">
                     <div class="frame-title">
                         <h2><strong>Scheduled Events</strong></h2>
@@ -280,6 +437,11 @@
                                     <p>May 27, 2023 9:00 AM</p>
                                     <p>Langlade County Court</p>
                                     <p>Remote Appearance</p>
+                                </div>
+                                <div class="comms-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
+                                        sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
+                                        arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
                                 </div>                           
                             </div>
                         </div>
@@ -290,7 +452,12 @@
                                     <p>June 7, 2023 3:00 PM</p>
                                     <p>Langlade County Court</p>
                                     <p>Remote Appearance</p>
-                                </div>                           
+                                </div>     
+                                <div class="comms-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
+                                        sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
+                                        arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="info-category">
@@ -300,151 +467,20 @@
                                     <p>July 19, 2023 8:30 AM</p>
                                     <p>Langlade County Court</p>
                                     <p>In Person</p>
+                                </div>
+                                <div class="comms-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
+                                        sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
+                                        arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
                                 </div>                           
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="info-panel">                    
-                    <div class="frame-title">
-                        <h2><strong>Tasks</strong></h2>
-                        <div class="button-panel">                            
-                            <div class="button-view">
-                                <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="frame">
-                        <div class="tasklist-header">
-                            <div class="filters">
-                                <label for="showComplete">Show Complete</label>
-                                <input type="checkbox" id="showComplete" name="showComplete">
-                                <label for="showCanceled">Show Canceled</label>
-                                <input type="checkbox" id="showCanceled" name="showCanceled">
-                                <label for="assigned-to">Assigned To</label>
-                                <select id="assigned-to" name="assigned-to">
-                                    <option value="user">Myself</option>
-                                    <option value="all">All</option>
-                                    <option value="john-doe">John Doe</option>
-                                    <option value="Joe Paralegal">Work</option>
-                                    <!-- Add more options here -->
-                                </select>
-                                <label for="category">Category</label>
-                                <select id="category" name="category">
-                                    <option value="all">All</option>
-                                    <option value="personal">Personal</option>
-                                    <option value="work">Work</option>
-                                    <!-- Add more options here -->
-                                </select>
-                                <label for="sorter">Sort by</label>
-                                <select id="sorter" name="sorter">
-                                    <option value="due-date">Due Date</option>
-                                    <option value="category">Category</option>
-                                    <option value="assigned-date">Assigned Date</option>
-                                    <!-- Add more options here -->
-                                </select>
-                            </div>
-                        </div>
-                        <div class="task-list">
-                            <table>
-                                <thead>
-                                    <tr>                                        
-                                        <th>Complete</th>
-                                        <th>Cancel</th>
-                                        <th>Task</th>
-                                        <th>Date Assigned</th>
-                                        <th>Assigned to</th>
-                                        <th>Date Due</th>
-                                        <th>View/Edit</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><input type="checkbox" /></td>
-                                        <td><input type="checkbox" /></td>
-                                        <td>Sample Task 1</td>
-                                        <td>2023-05-15</td>
-                                        <td>John Doe</td>
-                                        <td>2023-06-01</td>
-                                        <td>
-                                            <div class="button-view">
-                                                <img src="images/edit-icons/pencil-icon.png" alt="Edit">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" /></td>
-                                        <td><input type="checkbox" /></td>
-                                        <td>Sample Task 2</td>
-                                        <td>2023-05-20</td>
-                                        <td>Joe Paralegal</td>
-                                        <td>2023-06-10</td>
-                                        <td>
-                                            <div class="button-view">
-                                                <img src="images/edit-icons/pencil-icon.png" alt="Edit">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- Add more rows as needed -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>                     
-                </div>                        
+                              
             </div>
             <div class="panel-column">
-                <div class="info-panel">
-                    <div class="frame-title">
-                        <h2><strong>Permissions</strong></h2>
-                        <div class="button-panel">                            
-                            <div class="button-view">
-                                <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="frame">                  
-                        <div class="permission-info">
-                            <a class="card-link" href="https://www.example.com">                                        
-                            <div class="profile-info">
-                                <div class="permission-relationship">Father</div>          
-                                <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
-                                    alt="User Avatar" />
-                                <div class="permission-name">John Doe</div>
-                            </div>
-                        </a>                      
-                            <div class="permission-card">
-                                <div class="permission-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
-                                        sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
-                                        arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
-                                </div>
-                            </div>
-                            <div class="button-view">
-                                <img src="images/edit-icons/pencil-icon.png" alt="Edit">
-                            </div>
-                        </div>
-                        <div class="permission-info">
-                            <a class="card-link" href="https://www.example.com">                                        
-                            <div class="profile-info">
-                                <div class="permission-relationship">Mother</div>          
-                                <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
-                                    alt="User Avatar" />
-                                <div class="permission-name">Jane Doe</div>
-                            </div>
-                        </a>                      
-                            <div class="permission-card">
-                                <div class="permission-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
-                                        sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
-                                        arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
-                                </div>
-                            </div>
-                            <div class="button-view">
-                                <img src="images/edit-icons/pencil-icon.png" alt="Edit">
-                            </div>
-                        </div>                        
-                    </div>
-                </div> 
+                
                 <div class="info-panel comms-panel">
                     <div class="frame-title">
                         <h2><strong>Communication Log / Notes</strong></h2>
@@ -545,6 +581,7 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
       </div>
       <div class="tab-content" id="tab2">
@@ -553,6 +590,10 @@
       <div class="tab-content" id="tab3">
         <!-- Content for Tab 3 -->
       </div>
+      <div class="tab-content" id="tab4">
+        <!-- Content for Tab 4 -->
+      </div>
+
 </body>
 
 </html>

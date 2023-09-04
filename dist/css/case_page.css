@@ -187,6 +187,10 @@ body {
   margin-right: 10px;
 }
 
+.zero-left-margin {
+  margin-left: 0 !important;
+}
+
 .panel {
   position: relative;
   display: flex;
