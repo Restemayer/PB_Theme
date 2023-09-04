@@ -69,25 +69,6 @@
     background-color: $color-secondary;
     margin-top: 10px;
 }
-.panel-column {
-    margin-right: 10px;
-
-    &:first-child {
-        margin-left: 10px;
-    }
-
-    .info-panel {
-        margin-bottom: 10px;
-        h2 {
-          strong {
-            white-space: nowrap; /* Prevents wrapping of "Related Cases" */
-          }
-        }
-    }    
-    
-}
-
-
 
     h2 {
         color: $color-primary;

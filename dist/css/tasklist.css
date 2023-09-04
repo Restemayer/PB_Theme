@@ -1,6 +1,11 @@
+/* SCSS HEX */
+/* SCSS HSL */
+/* SCSS RGB */
+/* SCSS Gradient */
 .tasklist-header {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 .tasklist-header h2 {
   margin-right: 20px;
@@ -28,4 +33,28 @@
   border-radius: 5px;
   background-color: white;
   font-size: 0.75em; /* Adjust the font size */
+}
+
+.task-list {
+  margin: 20px;
+}
+.task-list table {
+  border-collapse: collapse;
+  width: 100%;
+  white-space: nowrap;
+}
+.task-list table th, .task-list table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+.task-list table th {
+  background-color: rgb(147, 198, 214);
+}
+.task-list table tr:nth-child(even) {
+  background-color: rgb(35, 94, 102);
+}
+.task-list table input[type=checkbox] {
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=tasklist.css.map */

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Figtree">
     <link rel="stylesheet" href="./css/client_page.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/tasklist.css" />
     <script src="js/numberbubble.js"></script>
     <script src="js/county_color.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -17,7 +18,7 @@
 </head>
 
 <body>
-    <header>  <!-- Header/navbar not copied in production. Already set in seperate module -->
+    <header> <!-- Header/navbar not copied in production. Already set in seperate module -->
         <nav>
             <div class="main-menu left-items">
                 <a href="/">
@@ -97,7 +98,7 @@
             </div>
         </nav>
     </header> <!-- End of website header/navbar -->
-    <div class="client_header_div panel-row">  
+    <div class="client_header_div panel-row">
         <div class="panel panel-column">
             <img class="edit-button" src="images/edit-icons/pencil-icon.png" alt="Edit">
             <div class="photo-container">
@@ -111,11 +112,11 @@
                     <span class="tag">Client</span>
                     <span class="tag">Paralegal</span>
                 </div>
-            </div>            
+            </div>
         </div>
-        <div class="header-panel panel-column">                       
+        <div class="header-panel panel-column">
             <div class="info-panel">
-                <h2><strong>Last Evaluation</strong></h2> 
+                <h2><strong>Last Evaluation</strong></h2>
                 <div class="frame">
                     <div class="info-category">
                         <div class="info-card no-pad">
@@ -126,22 +127,22 @@
                             <div class="button-panel">
                                 <div class="button-view">
                                     <img src="images/edit-icons/plus-icon.png" alt="Add">
-                                </div>      
+                                </div>
                                 <div class="button-view">
                                     <img src="images/edit-icons/eye-icon.png" alt="View">
-                                </div> 
+                                </div>
                                 <div class="button-view">
                                     <img src="images/edit-icons/pencil-icon.png" alt="Edit">
                                 </div>
-                            </div>                
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="header-panel panel-column">                       
+        <div class="header-panel panel-column">
             <div class="info-panel">
-                <h2><strong>Last Update</strong></h2> 
+                <h2><strong>Last Update</strong></h2>
                 <div class="frame">
                     <div class="info-category">
                         <div class="info-card no-pad">
@@ -152,13 +153,13 @@
                             </div>
                             <div class="card-content">
                                 <h4>Address Added: 123 Main St.</h4>
-                                <p>May 27, 2023 10:13 AM</p>                                
-                            </div>             
-                            <div class="button-panel">                                
+                                <p>May 27, 2023 10:13 AM</p>
+                            </div>
+                            <div class="button-panel">
                                 <div class="button-view">
                                     <img src="images/edit-icons/eye-icon.png" alt="View">
                                 </div>
-                            </div>                                
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -171,7 +172,14 @@
                 <h2><strong>Contact Information</strong></h2>
                 <div class="frame">
                     <div class="info-category">
-                        <h3>Addresses</h3>
+                        <div class="frame-title">
+                            <h3>Addresses</h3>
+                            <div class="button-panel">
+                                <div class="button-view">
+                                    <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
+                                </div>
+                            </div>
+                        </div>
                         <div class="info-card fill_background home-address">
                             <div class="card-content">
                                 <h4>Home</h4>
@@ -192,15 +200,17 @@
                             <div class="button-view">
                                 <img src="images/edit-icons/eye-icon.png" alt="View">
                             </div>
-                        </div>
-                        <div class="fill_background button-card">
-                            <div class="add-button-image">
-                                <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
-                            </div>
-                        </div>
+                        </div>                        
                     </div>
                     <div class="info-category">
-                        <h3>Phone Numbers</h3>
+                        <div class="frame-title">
+                            <h3>Phone Numbers</h3>
+                            <div class="button-panel">
+                                <div class="button-view">
+                                    <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
+                                </div>
+                            </div>
+                        </div>                        
                         <div class="info-card fill_background home-phone">
                             <div class="card-content">
                                 <h4>Home</h4>
@@ -218,15 +228,17 @@
                             <div class="button-view">
                                 <img src="images/edit-icons/eye-icon.png" alt="View">
                             </div>
-                        </div>
-                        <div class="fill_background button-card">
-                            <div class="add-button-image">
-                                <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
-                            </div>
-                        </div>
+                        </div>                        
                     </div>
                     <div class="info-category">
-                        <h3>Emails</h3>
+                        <div class="frame-title">
+                            <h3>Emails</h3>
+                            <div class="button-panel">
+                                <div class="button-view">
+                                    <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
+                                </div>
+                            </div>
+                        </div>  
                         <div class="info-card fill_background personal-email">
                             <div class="card-content">
                                 <h4>Personal</h4>
@@ -244,306 +256,422 @@
                             <div class="button-view">
                                 <img src="images/edit-icons/eye-icon.png" alt="View">
                             </div>
-                        </div>
-                        <div class="fill_background button-card">
-                            <div class="add-button-image">
-                                <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
-                            </div>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
         </div>
         <div class="panel-column">
             <div class="info-panel">
-                <h2><strong>Active Cases</strong></h2>
-                <div class="frame">
-                    <a class="card-link" href="https://www.example.com"
-                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
-                        <div class="grid-item">
-                            <div class="card-header">
-                                <p><span class="county">Taylor</span> Co. 2022CM0000053</p>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-info">
-                                    <p>Opened: June 27, 2023</p>
-                                    <br>
-                                    <p>Attorney: John Doe</p>
-                                    <p>Paralegal: Mike Smith</p>
-                                    <p>Investigator: Jane Reception</p>
-                                    <p>CSS: Jane Doe</p>
-                                    <br>
-                                    <p>Disorderly Conduct</p>
-                                    <p>4 other counts</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="card-link" href="https://www.example.com"
-                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
-                        <div class="grid-item">
-                            <div class="card-header">
-                                <p><span class="county">Lincoln</span> Co. 2022CM0000053</p>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-info">
-                                    <p>Opened: June 27, 2023</p>
-                                    <br>
-                                    <p>Unassigned</p>
-                                    <br>
-                                    <p>Disorderly Conduct</p>
-                                    <p>4 other counts</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="card-link" href="https://www.example.com"
-                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
-                        <div class="grid-item">
-                            <div class="card-header">
-                                <p><span class="county">Langlade</span> Co. 2022CM0000053</p>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-info">
-                                    <p>Opened: June 27, 2023</p>
-                                    <br>
-                                    <p>Pending Farm</p>
-                                    <br>
-                                    <p>Disorderly Conduct</p>
-                                    <p>4 other counts</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="info-panel">
-                <h2><strong>Closed Cases</strong></h2>
-                <div class="frame">
-                    <a class="card-link" href="https://www.example.com"
-                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
-                        <div class="grid-item">
-                            <div class="card-header">
-                                <p><span class="county">Taylor</span> Co. 2022CM0000053</p>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-info">
-                                    <p>Opened: June 27, 2022</p>
-                                    <p>Closed: June 27, 2023</p>
-                                    <br>
-                                    <p>Attorney: John Doe</p>
-                                    <br>
-                                    <p>Disorderly Conduct</p>
-                                    <p>4 other counts</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="card-link" href="https://www.example.com"
-                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
-                        <div class="grid-item">
-                            <div class="card-header">
-                                <p><span class="county">Lincoln</span> Co. 2022CM0000053</p>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-info">
-                                    <p>Opened: June 27, 2022</p>
-                                    <p>Closed: June 27, 2023</p>
-                                    <br>
-                                    <p>Attorney: John Doe</p>
-                                    <br>
-                                    <p>Disorderly Conduct</p>
-                                    <p>4 other counts</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="card-link" href="https://www.example.com"
-                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
-                        <div class="grid-item">
-                            <div class="card-header">
-                                <p><span class="county">Langlade</span> Co. 2022CM0000053</p>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-info">
-                                    <p>Opened: June 27, 2022</p>
-                                    <p>Closed: June 27, 2023</p>
-                                    <br>
-                                    <p>Attorney: John Doe</p>
-                                    <br>
-                                    <p>Disorderly Conduct</p>
-                                    <p>4 other counts</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="panel-column">
-            <div class="info-panel">
-                <h2><strong>Permissions</strong></h2>
-                <div class="frame">                  
-                    <div class="permission-info">
-                        <a class="card-link" href="https://www.example.com">                                        
-                        <div class="profile-info">
-                            <div class="permission-relationship">Father</div>          
-                            <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
-                                alt="User Avatar" />
-                            <div class="permission-name">John Doe</div>
-                        </div>
-                    </a>                      
-                        <div class="permission-card">
-                            <div class="permission-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
-                                    sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
-                                    arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
-                            </div>
-                        </div>
+                <div class="frame-title">
+                    <h2><strong>Tasks</strong></h2>
+                    <div class="button-panel">
                         <div class="button-view">
-                            <img src="images/edit-icons/pencil-icon.png" alt="Edit">
-                        </div>
-                    </div>
-                    <div class="permission-info">
-                        <a class="card-link" href="https://www.example.com">                                        
-                        <div class="profile-info">
-                            <div class="permission-relationship">Mother</div>          
-                            <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
-                                alt="User Avatar" />
-                            <div class="permission-name">Jane Doe</div>
-                        </div>
-                    </a>                      
-                        <div class="permission-card">
-                            <div class="permission-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
-                                    sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
-                                    arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
-                            </div>
-                        </div>
-                        <div class="button-view">
-                            <img src="images/edit-icons/pencil-icon.png" alt="Edit">
-                        </div>
-                    </div>
-                    <div class="fill_background button-card">
-                        <div class="add-button-image">
                             <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
                         </div>
                     </div>
                 </div>
-            </div>          
-            <div class="info-panel">
-                <h2><strong>Related Cases</strong></h2>
                 <div class="frame">
-                    <a class="card-link" href="https://www.example.com"
-                        data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
-                        <div class="grid-item">
-                            <div class="card-header">
-                                <p><span class="case_title">State v. John Smith</span></p>
-                                <p><span class="county">Taylor</span> Co. <span class="case_number">2022CM0000053</span></p>                                
-                            </div>
-                            <div class="card-body">
-                                <div class="card-info">
-                                    <p>Witness</p>                                    
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>          
-        </div>
-        <div class="panel-column">
-            <div class="info-panel comms-panel">
-                <h2><strong>Communication Log / Notes</strong></h2>
-                <div class="frame comms-frame">
-                    <div class="comms-div">
-                        <div class="comms-header">
-                            <div class="comms-info">
-                                <div class="left-align">
-                                    <div class="profile-info">
-                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
-                                            alt="User Avatar" />
-                                        <div class="comms-name">John Doe</div>
-                                    </div>
-                                    <div class="comms-time">5/27/2023 10:00 AM</div>
-                                </div>
-                                <div class="right-align">
-                                    <div class="comms-method">Pinned Note</div>
-                                    <div class="profile-info">
-                                        <img class="note-icon" src="images/edit-icons/pin-icon.png"
-                                            alt="Contact Avatar" />
-                                        <div class="comms-recipient"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comms-card">
-                            <div class="comms-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
-                                    sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
-                                    arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
-                            </div>
+                    <div class="tasklist-header">
+                        <div class="filters">
+                            <label for="showComplete">Show Complete</label>
+                            <input type="checkbox" id="showComplete" name="showComplete">
+                            <label for="showCanceled">Show Canceled</label>
+                            <input type="checkbox" id="showCanceled" name="showCanceled">
+                            <label for="case">Case</label>
+                            <select id="case" name="case">
+                                <option value="all">All</option>
+                                <option value="none">None</option>
+                                <option value="22CM53">Lincoln 2022CM0000053</option>
+                                <option value="23CM53">Langlade 2023CM0000053</option>
+                                <!-- Add more options here -->
+                            </select>
+                            <label for="assigned-to">Assigned To</label>
+                            <select id="assigned-to" name="assigned-to">
+                                <option value="user">Myself</option>
+                                <option value="all">All</option>
+                                <option value="john-doe">John Doe</option>
+                                <option value="Joe Paralegal">Work</option>
+                                <!-- Add more options here -->
+                            </select>
+                            <label for="category">Category</label>
+                            <select id="category" name="category">
+                                <option value="all">All</option>
+                                <option value="personal">Personal</option>
+                                <option value="work">Work</option>
+                                <!-- Add more options here -->
+                            </select>
+                            <label for="sorter">Sort by</label>
+                            <select id="sorter" name="sorter">
+                                <option value="due-date">Due Date</option>
+                                <option value="category">Category</option>
+                                <option value="assigned-date">Assigned Date</option>
+                                <!-- Add more options here -->
+                            </select>
                         </div>
                     </div>
-                    <div class="comms-div">
-                        <div class="comms-header">
-                            <div class="comms-info">
-                                <div class="left-align">
-                                    <div class="profile-info">
-                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
-                                            alt="User Avatar" />
-                                        <div class="comms-name">John Doe</div>
-                                    </div>
-                                    <div class="comms-time">5/27/2023 10:00 AM</div>
-                                </div>
-                                <div class="right-align">
-                                    <div class="comms-method">Email with </div>
-                                    <div class="profile-info">
-                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
-                                            alt="Contact Avatar" />
-                                        <div class="comms-recipient">Jane Smith</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comms-card">
-                            <div class="comms-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
-                                    sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
-                                    arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comms-div">
-                        <div class="comms-header">
-                            <div class="comms-info">
-                                <div class="left-align">
-                                    <div class="profile-info">
-                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
-                                            alt="User Avatar" />
-                                        <div class="comms-name">John Doe</div>
-                                    </div>
-                                    <div class="comms-time">5/27/2023 10:00 AM</div>
-                                </div>
-                                <div class="right-align">
-                                    <div class="comms-method">Note</div>
-                                    <div class="profile-info">
-                                        <img class="note-icon" src="images/edit-icons/note-icon.png"
-                                            alt="Contact Avatar" />
-                                        <div class="comms-recipient"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comms-card">
-                            <div class="comms-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis ex, ac
-                                    sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum fermentum,
-                                    arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
-                            </div>
-                        </div>
+                    <div class="task-list">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Complete</th>
+                                    <th>Cancel</th>
+                                    <th>Case</th>
+                                    <th>Task</th>
+                                    <th>Date Assigned</th>
+                                    <th>Assigned to</th>
+                                    <th>Date Due</th>
+                                    <th>View/Edit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td><input type="checkbox" /></td>
+                                    <td>Langlade 2023CM0000053</td>
+                                    <td>Sample Task 1</td>
+                                    <td>2023-05-15</td>
+                                    <td>John Doe</td>
+                                    <td>2023-06-01</td>
+                                    <td>
+                                        <div class="button-view">
+                                            <img src="images/edit-icons/pencil-icon.png" alt="Edit">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td><input type="checkbox" /></td>
+                                    <td>Lincoln 2022CM0000053</td>
+                                    <td>Sample Task 2</td>
+                                    <td>2023-05-20</td>
+                                    <td>Joe Paralegal</td>
+                                    <td>2023-06-10</td>
+                                    <td>
+                                        <div class="button-view">
+                                            <img src="images/edit-icons/pencil-icon.png" alt="Edit">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
+            <div class="panel-row">
+                <div class="panel-column">
+                    <div class="info-panel">
+                        <h2><strong>Active Cases</strong></h2>
+                        <div class="frame">
+                            <a class="card-link" href="https://www.example.com"
+                                data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                                <div class="grid-item">
+                                    <div class="card-header">
+                                        <p><span class="county">Taylor</span> Co. 2022CM0000053</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-info">
+                                            <p>Opened: June 27, 2023</p>
+                                            <br>
+                                            <p>Attorney: John Doe</p>
+                                            <p>Paralegal: Mike Smith</p>
+                                            <p>Investigator: Jane Reception</p>
+                                            <p>CSS: Jane Doe</p>
+                                            <br>
+                                            <p>Disorderly Conduct</p>
+                                            <p>4 other counts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="card-link" href="https://www.example.com"
+                                data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                                <div class="grid-item">
+                                    <div class="card-header">
+                                        <p><span class="county">Lincoln</span> Co. 2022CM0000053</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-info">
+                                            <p>Opened: June 27, 2023</p>
+                                            <br>
+                                            <p>Unassigned</p>
+                                            <br>
+                                            <p>Disorderly Conduct</p>
+                                            <p>4 other counts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="card-link" href="https://www.example.com"
+                                data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                                <div class="grid-item">
+                                    <div class="card-header">
+                                        <p><span class="county">Langlade</span> Co. 2022CM0000053</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-info">
+                                            <p>Opened: June 27, 2023</p>
+                                            <br>
+                                            <p>Pending Farm</p>
+                                            <br>
+                                            <p>Disorderly Conduct</p>
+                                            <p>4 other counts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-column">
+                    <div class="info-panel">
+                        <h2><strong>Related Cases</strong></h2>
+                        <div class="frame">
+                            <a class="card-link" href="https://www.example.com"
+                                data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                                <div class="grid-item">
+                                    <div class="card-header">
+                                        <p><span class="case_title">State v. John Smith</span></p>
+                                        <p><span class="county">Taylor</span> Co. <span
+                                                class="case_number">2022CM0000053</span></p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-info">
+                                            <p>Witness</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info-panel">
+                        <h2><strong>Closed Cases</strong></h2>
+                        <div class="frame">
+                            <a class="card-link" href="https://www.example.com"
+                                data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                                <div class="grid-item">
+                                    <div class="card-header">
+                                        <p><span class="county">Taylor</span> Co. 2022CM0000053</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-info">
+                                            <p>Opened: June 27, 2022</p>
+                                            <p>Closed: June 27, 2023</p>
+                                            <br>
+                                            <p>Attorney: John Doe</p>
+                                            <br>
+                                            <p>Disorderly Conduct</p>
+                                            <p>4 other counts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="card-link" href="https://www.example.com"
+                                data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                                <div class="grid-item">
+                                    <div class="card-header">
+                                        <p><span class="county">Lincoln</span> Co. 2022CM0000053</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-info">
+                                            <p>Opened: June 27, 2022</p>
+                                            <p>Closed: June 27, 2023</p>
+                                            <br>
+                                            <p>Attorney: John Doe</p>
+                                            <br>
+                                            <p>Disorderly Conduct</p>
+                                            <p>4 other counts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="card-link" href="https://www.example.com"
+                                data-sorts='{"client_name" : "Johnson Richard", "county" : "Taylor", "case_type" : "Criminal", "next_event" : "Initial Appearance", "next_hearing" : "202312121600", "judge" : "Mike Smith"}'>
+                                <div class="grid-item">
+                                    <div class="card-header">
+                                        <p><span class="county">Langlade</span> Co. 2022CM0000053</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-info">
+                                            <p>Opened: June 27, 2022</p>
+                                            <p>Closed: June 27, 2023</p>
+                                            <br>
+                                            <p>Attorney: John Doe</p>
+                                            <br>
+                                            <p>Disorderly Conduct</p>
+                                            <p>4 other counts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-column">
+                    <div class="info-panel">
+                        <div class="frame-title">
+                            <h2><strong>Permissions</strong></h2>
+                            <div class="button-panel">
+                                <div class="button-view">
+                                    <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="permission-info">
+                                <a class="card-link" href="https://www.example.com">
+                                    <div class="profile-info">
+                                        <div class="permission-relationship">Father</div>
+                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                            alt="User Avatar" />
+                                        <div class="permission-name">John Doe</div>
+                                    </div>
+                                </a>
+                                <div class="permission-card">
+                                    <div class="permission-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis
+                                            ex, ac
+                                            sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum
+                                            fermentum,
+                                            arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
+                                    </div>
+                                </div>
+                                <div class="button-view">
+                                    <img src="images/edit-icons/pencil-icon.png" alt="Edit">
+                                </div>
+                            </div>
+                            <div class="permission-info">
+                                <a class="card-link" href="https://www.example.com">
+                                    <div class="profile-info">
+                                        <div class="permission-relationship">Mother</div>
+                                        <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                            alt="User Avatar" />
+                                        <div class="permission-name">Jane Doe</div>
+                                    </div>
+                                </a>
+                                <div class="permission-card">
+                                    <div class="permission-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis
+                                            ex, ac
+                                            sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum
+                                            fermentum,
+                                            arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
+                                    </div>
+                                </div>
+                                <div class="button-view">
+                                    <img src="images/edit-icons/pencil-icon.png" alt="Edit">
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="info-panel comms-panel">
+                        <div class="frame-title">
+                            <h2><strong>Communication Log / Notes</strong></h2>
+                            <div class="button-panel">
+                                <div class="button-view">
+                                    <img class="add-button" src="images/edit-icons/plus-icon.png" alt="Add">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame comms-frame">
+                            <div class="comms-div">
+                                <div class="comms-header">
+                                    <div class="comms-info">
+                                        <div class="left-align">
+                                            <div class="profile-info">
+                                                <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                                    alt="User Avatar" />
+                                                <div class="comms-name">John Doe</div>
+                                            </div>
+                                            <div class="comms-time">5/27/2023 10:00 AM</div>
+                                        </div>
+                                        <div class="right-align">
+                                            <div class="comms-method">Pinned Note</div>
+                                            <div class="profile-info">
+                                                <img class="note-icon" src="images/edit-icons/pin-icon.png"
+                                                    alt="Contact Avatar" />
+                                                <div class="comms-recipient"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comms-card">
+                                    <div class="comms-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis
+                                            ex, ac
+                                            sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum
+                                            fermentum,
+                                            arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comms-div">
+                                <div class="comms-header">
+                                    <div class="comms-info">
+                                        <div class="left-align">
+                                            <div class="profile-info">
+                                                <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                                    alt="User Avatar" />
+                                                <div class="comms-name">John Doe</div>
+                                            </div>
+                                            <div class="comms-time">5/27/2023 10:00 AM</div>
+                                        </div>
+                                        <div class="right-align">
+                                            <div class="comms-method">Email with </div>
+                                            <div class="profile-info">
+                                                <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                                    alt="Contact Avatar" />
+                                                <div class="comms-recipient">Jane Smith</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comms-card">
+                                    <div class="comms-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis
+                                            ex, ac
+                                            sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum
+                                            fermentum,
+                                            arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comms-div">
+                                <div class="comms-header">
+                                    <div class="comms-info">
+                                        <div class="left-align">
+                                            <div class="profile-info">
+                                                <img class="comms-avatar" src="images/contact-photos/default-avatar.png"
+                                                    alt="User Avatar" />
+                                                <div class="comms-name">John Doe</div>
+                                            </div>
+                                            <div class="comms-time">5/27/2023 10:00 AM</div>
+                                        </div>
+                                        <div class="right-align">
+                                            <div class="comms-method">Note</div>
+                                            <div class="profile-info">
+                                                <img class="note-icon" src="images/edit-icons/note-icon.png"
+                                                    alt="Contact Avatar" />
+                                                <div class="comms-recipient"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comms-card">
+                                    <div class="comms-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tempor sagittis
+                                            ex, ac
+                                            sagittis sem vestibulum vitae. Vestibulum faucibus, lacus id fermentum
+                                            fermentum,
+                                            arcu sapien lacinia nulla, a tincidunt neque neque a sem.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
         </div>
     </div>
 </body>

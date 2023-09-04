@@ -33,111 +33,92 @@
     background-color: $color-secondary;
     margin-top: 10px;
 }
-.panel-column {
-    margin-right: 10px;
 
-    &:first-child {
-        margin-left: 10px;
-    }
-
-    .info-panel {
-        h2 {
-          strong {
-            white-space: nowrap; /* Prevents wrapping of "Related Cases" */
-          }
-        }
-    }    
-    
+h2 {
+    color: $color-primary;
+    font-size: 1.5em; // this will make the font twice as big as the normal font-size
+    font-weight: bold; // this will make the font bold
+    margin-bottom: 10px;
 }
 
+.frame {
+    background-color: $color-secondary;
+    border: 2px solid $color-primary;
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 100%;
 
+    a.card-link {
+        text-decoration: none;
+        color: inherit;        
 
-    h2 {
-        color: $color-primary;
-        font-size: 1.5em; // this will make the font twice as big as the normal font-size
-        font-weight: bold; // this will make the font bold
-        margin-bottom: 10px;
-    }
-
-    .frame {
-        background-color: $color-secondary;
-        border: 2px solid $color-primary;
-        border-radius: 10px;
-        padding: 10px;
-        min-width: 100%;
-
-        a.card-link {
-            text-decoration: none;
-            color: inherit;
+        .grid-item {
+            background-color: $color-primary;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); //optional
             
 
-            .grid-item {
-                background-color: $color-primary;
-                border-radius: 10px;
+            .card-header {
+                background-color: white;
                 padding: 10px;
-                margin: 10px 0;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); //optional
+                border-radius: 10px;
                 
 
-                .card-header {
-                    background-color: white;
-                    padding: 10px;
-                    border-radius: 10px;
+                .card-title {
+                    margin: 0;
+                    font-weight: bold;
+                    margin-bottom: 5px;
                     
-
-                    .card-title {
-                        margin: 0;
-                        font-weight: bold;
-                        margin-bottom: 5px;
-                        
-                    }
-
-                    p {
-                        white-space: nowrap;                        
-                      }
-
                 }
 
-                .card-body {
-                    padding: 10px 10px 0 10px;
-                    white-space: nowrap;
-
-                    p {
-                        color: #000;
+                p {
+                    white-space: nowrap;                        
                     }
+
+            }
+
+            .card-body {
+                padding: 10px 10px 0 10px;
+                white-space: nowrap;
+
+                p {
+                    color: #000;
                 }
             }
         }
     }
+}
 
-    .info-category {
-        h3 {
-            color: $color-primary;
-            margin-bottom: 10px;
-            font-size: 1em; // this will make the font twice as big as the normal font-size
-            font-weight: bold; // this will make the font bold
-        }
-
-        .info-card {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;            
-            padding: 10px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            width: 100%;
-
-            .card-content {
-                max-width: 70%;
-                margin-right: 5px;
-                white-space: nowrap;
-
-                h4 {
-                    font-weight: bold;
-                }
-            }               
-        }
+.info-category {
+    h3 {
+        color: $color-primary;
+        margin-bottom: 10px;
+        font-size: 1em; // this will make the font twice as big as the normal font-size
+        font-weight: bold; // this will make the font bold
     }
+
+    .info-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;            
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+
+        .card-content {
+            max-width: 70%;
+            margin-right: 5px;
+            white-space: nowrap;
+
+            h4 {
+                font-weight: bold;
+            }
+        }               
+    }
+}
 
 
 .button-panel div {
@@ -185,12 +166,12 @@
     width: auto;
 }
 
-.employee {
+.contact {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 
-    .employee-profile, .employee-data {
+    .contact-profile, .contact-data {
         white-space: nowrap;
         margin-right: 10px;
     }

@@ -127,3 +127,37 @@ body {
       transform: scale(0.95);
   }
 }
+
+.panel-column {
+  margin-right: 10px;
+
+  &:first-child {
+      margin-left: 10px;
+  }
+
+  .info-panel {
+      margin-bottom: 10px;
+      h2 {
+        strong {
+          white-space: nowrap; /* Prevents wrapping of "Related Cases" */
+        }
+      }
+  }   
+}
+.frame-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3px;
+  h2 {
+      margin: 0;
+  }
+  .button-panel{
+    display: flex;
+    
+    .button-view {
+        margin: 0;
+        margin-right: 10px;
+    }
+  }
+}
